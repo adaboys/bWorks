@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Bworks
 
 #RUN employer app
@@ -36,3 +37,6 @@ DOMAIN=hcm.Bworks.online
 ```
 docker-compose up -d
 ```
+=======
+# bworks
+>>>>>>> 816bff554262b74fdec28f561db3ba193053d639
