@@ -12,12 +12,6 @@ COPY --chown=node . .
 RUN rm -rf $(find $PWD/packages -maxdepth 1 -mindepth 1 -type d -exec ls -d "{}" + | grep -v "bWorks-api" | grep -v "bwork-libs")
 # Prevent Puppeteer to download Chromium dep
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
-# Enable SSH agent
-# Add SSH key to system
-# Add name of server hosting custom libs
-# Install app dependencies
-# Remove the SSH keys afterwards
-
 RUN yarn install --production --force
 
 # Modify datasource file to be Docker compatible

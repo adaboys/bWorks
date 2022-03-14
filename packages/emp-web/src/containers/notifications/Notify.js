@@ -9,7 +9,7 @@ import { withDataProvider, CUSTOM, translate } from 'bwork-libs';
 import config from '../../Config';
 
 class Notify extends Component {
-  state = { notifyItems: [] };
+  state = { notifyItcardano: [] };
 
   componentDidMount() {
     this.loadNotify();
@@ -23,7 +23,7 @@ class Notify extends Component {
       query: { mode: 'notify' },
     }).then(res => {
       if (res) {
-        this.setState({ notifyItems: res.data });
+        this.setState({ notifyItcardano: res.data });
       }
     });
   };
@@ -54,7 +54,7 @@ class Notify extends Component {
       return (
         <Fragment key={item._id}>
           <MenuItem onClick={this.props.handleClose}>
-            <Typography variant="subheading"> {item.dataLoggerName} </Typography>
+            <Typography variant="subheading"> {item.dataloadName} </Typography>
           </MenuItem>
           {item.alertRecord.totalAlert.map(subItem => {
             return (
@@ -72,12 +72,12 @@ class Notify extends Component {
 
   render() {
     // const { handleClose } = this.props;
-    const { notifyItems } = this.state;
-    if (notifyItems.length < 1) {
+    const { notifyItcardano } = this.state;
+    if (notifyItcardano.length < 1) {
       return null;
     }
 
-    return <Fragment> {this.renderItem(notifyItems)} </Fragment>;
+    return <Fragment> {this.renderItem(notifyItcardano)} </Fragment>;
   }
 }
 

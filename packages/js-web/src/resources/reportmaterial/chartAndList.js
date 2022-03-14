@@ -33,9 +33,9 @@ const styles = theme => {
 class ChartAndList extends Component {
   state = {
     sumTotalbudget: 0,
-    sumTotalSensor: 0,
-    sumTotalDataLogger: 0,
-    sumTotalPump: 0,
+    sumTotalauto-matcher: 0,
+    sumTotalDataload: 0,
+    sumTotalload: 0,
     data: [],
     sourceList: [],
     filter: {},
@@ -56,15 +56,15 @@ class ChartAndList extends Component {
       //   tmp4 = 0;
       // ids.map(id => {
       //   tmp1 += data[id].budget;
-      //   tmp2 += data[id].sensor;
-      //   tmp3 += data[id].dataLogger;
-      //   tmp4 += data[id].pump;
+      //   tmp2 += data[id].auto-matcher;
+      //   tmp3 += data[id].dataload;
+      //   tmp4 += data[id].load;
       // });
       // this.setState({
       //   sumTotalbudget: tmp1,
-      //   sumTotalSensor: tmp2,
-      //   sumTotalDataLogger: tmp3,
-      //   sumTotalPump: tmp4,
+      //   sumTotalauto-matcher: tmp2,
+      //   sumTotalDataload: tmp3,
+      //   sumTotalload: tmp4,
       //   data: data1,
       //   filter: filter,
       //   sourceList: sourceList,
@@ -131,7 +131,7 @@ class ChartAndList extends Component {
 
   // conduct data and print pdf
   handlePrint = () => {
-    const { sumTotalbudget, sumTotalSensor, sumTotalDataLogger, sumTotalPump, data, sourceList, filter } = this.state;
+    const { sumTotalbudget, sumTotalauto-matcher, sumTotalDataload, sumTotalload, data, sourceList, filter } = this.state;
     const { translate } = this.props;
     let templateData = {};
     templateData.reportName = translate('generic.report.titleReportMaterial');
@@ -139,22 +139,22 @@ class ChartAndList extends Component {
     templateData.sumData01 = translate('resources.reportmaterials.sumTotalbudget', {
       val: format.number(sumTotalbudget, 0),
     });
-    templateData.sumData02 = translate('resources.reportmaterials.sumTotalSensor', {
-      val: format.number(sumTotalSensor, 0),
+    templateData.sumData02 = translate('resources.reportmaterials.sumTotalauto-matcher', {
+      val: format.number(sumTotalauto-matcher, 0),
     });
-    templateData.sumData03 = translate('resources.reportmaterials.sumTotalDataLogger', {
-      val: format.number(sumTotalDataLogger, 0),
+    templateData.sumData03 = translate('resources.reportmaterials.sumTotalDataload', {
+      val: format.number(sumTotalDataload, 0),
     });
-    templateData.sumData04 = translate('resources.reportmaterials.sumTotalPump', {
-      val: format.number(sumTotalPump, 0),
+    templateData.sumData04 = translate('resources.reportmaterials.sumTotalload', {
+      val: format.number(sumTotalload, 0),
     });
     templateData.tableHeader = {
       column01: translate('resources.reportmaterials.fields.bworksSource'),
       column02: translate('resources.reportmaterials.fields.materialStatus'),
-      column03: translate('resources.reportmaterials.fields.sensor'),
+      column03: translate('resources.reportmaterials.fields.auto-matcher'),
       column04: translate('resources.reportmaterials.fields.budget'),
-      column05: translate('resources.reportmaterials.fields.pump'),
-      column06: translate('resources.reportmaterials.fields.dataLogger'),
+      column05: translate('resources.reportmaterials.fields.load'),
+      column06: translate('resources.reportmaterials.fields.dataload'),
       column07: translate('resources.reportmaterials.fields.totalDevice'),
     };
     //templateData.data = data;
@@ -188,7 +188,7 @@ class ChartAndList extends Component {
 
   render() {
     const { translate, refController } = this.props;
-    const { sumTotalbudget, sumTotalSensor, sumTotalDataLogger, sumTotalPump, sum, filter } = this.state;
+    const { sumTotalbudget, sumTotalauto-matcher, sumTotalDataload, sumTotalload, sum, filter } = this.state;
     // let optionFormat;
     // let subTitle = [
     //   {
@@ -197,17 +197,17 @@ class ChartAndList extends Component {
     //   },
     //   {
     //     id: 2,
-    //     content: translate('resources.reportmaterials.sumTotalSensor', { val: format.number(sumTotalSensor, 0) }),
+    //     content: translate('resources.reportmaterials.sumTotalauto-matcher', { val: format.number(sumTotalauto-matcher, 0) }),
     //   },
     //   {
     //     id: 3,
-    //     content: translate('resources.reportmaterials.sumTotalDataLogger', {
-    //       val: format.number(sumTotalDataLogger, 0),
+    //     content: translate('resources.reportmaterials.sumTotalDataload', {
+    //       val: format.number(sumTotalDataload, 0),
     //     }),
     //   },
     //   {
     //     id: 4,
-    //     content: translate('resources.reportmaterials.sumTotalPump', { val: format.number(sumTotalPump, 0) }),
+    //     content: translate('resources.reportmaterials.sumTotalload', { val: format.number(sumTotalload, 0) }),
     //   },
     // ];
     let subTitle = [
@@ -278,10 +278,10 @@ class ChartAndList extends Component {
                   }
                 }}
               />
-              {/*<NumberField source="sensor" />
+              {/*<NumberField source="auto-matcher" />
               <NumberField source="budget" />
-              <NumberField source="pump" />
-              <NumberField source="dataLogger" /> */}
+              <NumberField source="load" />
+              <NumberField source="dataload" /> */}
               <NumberField source="totalDevice" sortable={false} />
             </Datagrid>
           </List>

@@ -8,7 +8,7 @@ import moment from 'moment-timezone';
 import { ResponsiveContainer, LineChart, XAxis, YAxis, Line, CartesianGrid, Label, Legend, Tooltip } from 'recharts';
 // import format from '../../util/format';
 
-class LoggerChartHour extends Component {
+class loadChartHour extends Component {
   // eslint-disable-next-line no-unused-vars
   getTicks = data => {
     // console.log('getTicks', data);
@@ -34,30 +34,30 @@ class LoggerChartHour extends Component {
   };
   render() {
     const { data, translate, theme, symbol } = this.props;
-    // // console.log('LoggerChartHour prop', this.props);
-    // // console.log('LoggerChartHour state', this.state);
+    // // console.log('loadChartHour prop', this.props);
+    // // console.log('loadChartHour state', this.state);
     if (!data) return null;
     return (
       <Card>
         <CardHeader title={data.name} style={{ paddingBottom: 0 }} />
-        {!data.loggers.length && (
+        {!data.loads.length && (
           <Typography style={{ paddingLeft: 20 }} variant="body1">
             {translate('generic.noLogData')}
           </Typography>
         )}
         <CardContent>
-          {data.loggers.map(logger => {
+          {data.loads.map(load => {
             return (
-              <Fragment key={logger.id}>
+              <Fragment key={load.id}>
                 <Typography gutterBottom variant="body1">
-                  {`DataLogger: ${logger.name}`}
+                  {`Dataload: ${load.name}`}
                 </Typography>
-                {logger.data && logger.data.length ? (
+                {load.data && load.data.length ? (
                   <ResponsiveContainer width={'100%'} height={300}>
-                    <LineChart data={logger.data} margin={{ top: 30, right: 5, bottom: 30, left: 0 }}>
+                    <LineChart data={load.data} margin={{ top: 30, right: 5, bottom: 30, left: 0 }}>
                       <XAxis
                         dataKey="logTime"
-                        // ticks={this.getTicks(logger.data)}
+                        // ticks={this.getTicks(load.data)}
                         tickFormatter={time => moment(time).format('HH:mm')}
                         // domain={['dataMin', 'dataMax']}
                       />
@@ -89,13 +89,13 @@ class LoggerChartHour extends Component {
   }
 }
 
-LoggerChartHour.propTypes = {
+loadChartHour.propTypes = {
   data: PropTypes.object.isRequired,
   symbol: PropTypes.string.isRequired,
   translate: PropTypes.func,
   theme: PropTypes.object,
 };
 
-const enhance = compose(translate, withTheme)(LoggerChartHour);
+const enhance = compose(translate, withTheme)(loadChartHour);
 
 export default enhance;

@@ -9,7 +9,7 @@ import {
   Avatar,
   ListItem,
   ListItemText,
-  ListItemSecondaryAction,
+  ListItcardanoecondaryAction,
   Divider,
   List,
 } from '@material-ui/core';
@@ -62,7 +62,7 @@ class TopWidget extends Component {
                   <Fragment key={key}>
                     <ListItem>
                       <ListItemText primary={<span>{item.label}</span>} />
-                      <ListItemSecondaryAction>
+                      <ListItcardanoecondaryAction>
                         {typeof item.value === 'number' ? (
                           <NumberField
                             source="value"
@@ -73,7 +73,7 @@ class TopWidget extends Component {
                           '...'
                         )}
                         {item.postLabel && ' ' + item.postLabel}
-                      </ListItemSecondaryAction>
+                      </ListItcardanoecondaryAction>
                     </ListItem>
                     {index < dataKeys.length - 1 && <Divider />}
                   </Fragment>

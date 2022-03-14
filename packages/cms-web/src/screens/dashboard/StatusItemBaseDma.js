@@ -6,7 +6,7 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
-  ListItemSecondaryAction,
+  ListItcardanoecondaryAction,
   Tooltip,
   Chip,
   Avatar,
@@ -53,7 +53,7 @@ let currentStatus1 = [
               <bworksSourceIcon />
             </ListItemIcon>
             <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{bworksSource.bworksSourceName}</b>} />
-            <ListItemSecondaryAction>
+            <ListItcardanoecondaryAction>
               <Tooltip title={translate('generic.totalAlert')}>
                 <Chip
                   avatar={
@@ -71,7 +71,7 @@ let currentStatus1 = [
                   label={bworksSource.totalAlert}
                 />
               </Tooltip>
-            </ListItemSecondaryAction>
+            </ListItcardanoecondaryAction>
           </ListItem>
           <Divider style={{ marginLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }} />
 
@@ -82,7 +82,7 @@ let currentStatus1 = [
             style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
             key={bworksSource.logTime}
           >
-            <ListItemSecondaryAction>
+            <ListItcardanoecondaryAction>
             
                 <Fragment key={bworksSource.bworksSourceName}>
                   <Tooltip title={translate('generic.lastSignal')}>
@@ -99,7 +99,7 @@ let currentStatus1 = [
                   </Tooltip>
                 </Fragment>
              
-            </ListItemSecondaryAction>
+            </ListItcardanoecondaryAction>
           </ListItem>
           <ListItem
             button
@@ -108,7 +108,7 @@ let currentStatus1 = [
             style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
             key={bworksSource.totalFlowRate}
           >
-            <ListItemSecondaryAction>
+            <ListItcardanoecondaryAction>
               
                 <Fragment key={bworksSource.bworksSourceName}>
                   <Tooltip title={translate('generic.totalFlowRate')}>
@@ -120,7 +120,7 @@ let currentStatus1 = [
                   </Tooltip>
                 </Fragment>
              
-            </ListItemSecondaryAction>
+            </ListItcardanoecondaryAction>
           </ListItem>
           <ListItem
             button
@@ -129,7 +129,7 @@ let currentStatus1 = [
             style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
             key={bworksSource.avgNtu}
           >
-            <ListItemSecondaryAction>
+            <ListItcardanoecondaryAction>
              
                 <Fragment key={bworksSource.bworksSourceName}>
                   <Tooltip title={translate('generic.turbidityAvg')}>
@@ -141,7 +141,7 @@ let currentStatus1 = [
                   </Tooltip>
                 </Fragment>
              
-            </ListItemSecondaryAction>
+            </ListItcardanoecondaryAction>
           </ListItem>
         
         </Fragment>

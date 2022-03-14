@@ -1,7 +1,7 @@
 import React from 'react';
 import { SvgIcon } from '@material-ui/core';
 
-const QualityLoggerIcon = props => (
+const QualityloadIcon = props => (
   <SvgIcon {...props} viewBox="0 0 301.605 301.605">
     <path
       d="M236.896,38.375v12.854h-49.808V38.375H236.896z M216.009,66.389h-28.921v12.854h28.921V66.389z M187.088,107.257h49.808
@@ -19,4 +19,4 @@ const QualityLoggerIcon = props => (
   </SvgIcon>
 );
 
-export default QualityLoggerIcon;
+export default QualityloadIcon;

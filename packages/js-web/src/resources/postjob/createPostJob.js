@@ -60,7 +60,7 @@ class CreatePostJob extends Component {
               />
             </Grid>
             <Grid middle item xs={12} sm={6}>
-              <ArrayInput source="subitems" label="Task breakdown">
+              <ArrayInput source="subitcardano" label="Task breakdown">
                 <SimpleFormIterator>
                   <TextInput label="Subtask" source="value" validate={[required()]} />
                 </SimpleFormIterator>

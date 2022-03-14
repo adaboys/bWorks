@@ -8,7 +8,7 @@ import {
   Avatar,
   Divider,
   List,
-  ListItemSecondaryAction,
+  ListItcardanoecondaryAction,
   ListItemIcon,
 } from '@material-ui/core';
 import moment from 'moment-timezone';
@@ -16,13 +16,13 @@ import { translate } from 'bwork-libs';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { push as pushAction } from 'react-router-redux';
-import { bworksSourceIcon, LogTimeIcon, FlowLoggerIcon } from '../../styles/Icons';
+import { bworksSourceIcon, LogTimeIcon, FlowloadIcon } from '../../styles/Icons';
 import config from '../../Config';
 
-class StatusItemBaseFlowLogger extends Component {
+class StatusItemBaseFlowload extends Component {
   // eslint-disable-next-line
   showStatistic = id => {
-    // this.props.push(`statisticFlowLogger/${id}`);
+    // this.props.push(`statisticFlowload/${id}`);
   };
 
   translateColor(alert) {
@@ -42,7 +42,7 @@ class StatusItemBaseFlowLogger extends Component {
   }
   render() {
     const { currentStatus, classes, theme, getDmaPadding, translate } = this.props;
-    // if (!currentStatus[0].dataLoggers || currentStatus[0].dataLoggers.length < 1) {
+    // if (!currentStatus[0].dataloads || currentStatus[0].dataloads.length < 1) {
     //   return null;
     // }
     console.log( currentStatus);
@@ -55,40 +55,40 @@ class StatusItemBaseFlowLogger extends Component {
                 <bworksSourceIcon />
               </ListItemIcon>
               <ListItemText style={{ paddingLeft: theme.spacing(1) }} primary={<b>{bworksSource.bworksSourceName}</b>} />
-              <ListItemSecondaryAction>
-                <Tooltip title={translate('generic.totalDataLogger')}>
+              <ListItcardanoecondaryAction>
+                <Tooltip title={translate('generic.totalDataload')}>
                   <Chip
                     avatar={
                       <Avatar className={classes.chipIcon}>
-                        <FlowLoggerIcon />
+                        <FlowloadIcon />
                       </Avatar>
                     }
                     className={classes.chip}
-                    label={Array.isArray(bworksSource.dataLoggers) ? bworksSource.dataLoggers.length : ''}
+                    label={Array.isArray(bworksSource.dataloads) ? bworksSource.dataloads.length : ''}
                   />
                 </Tooltip>
-              </ListItemSecondaryAction>
+              </ListItcardanoecondaryAction>
             </ListItem>
-            {Array.isArray(bworksSource.dataLoggers) && bworksSource.dataLoggers.length > 0 && (
+            {Array.isArray(bworksSource.dataloads) && bworksSource.dataloads.length > 0 && (
               <List component="div" disablePadding>
-                {bworksSource.dataLoggers.map(dataLogger => (
-                  <Fragment key={dataLogger._id}>
+                {bworksSource.dataloads.map(dataload => (
+                  <Fragment key={dataload._id}>
                     <Divider style={{ marginLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }} />
                     <ListItem
                       button
-                      onClick={() => this.showStatistic(dataLogger._id)}
+                      onClick={() => this.showStatistic(dataload._id)}
                       className={classes.nested}
                       style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
-                      key={dataLogger._id}
+                      key={dataload._id}
                     >
                       <ListItemText
                         component="div"
                         style={{ paddingLeft: theme.spacing(1) }}
-                        primary={dataLogger.dataLoggerName || translate('generic.noNaming')}
+                        primary={dataload.dataloadName || translate('generic.noNaming')}
                       />
 
-                      <ListItemSecondaryAction>
-                        {dataLogger.logTime ? (
+                      <ListItcardanoecondaryAction>
+                        {dataload.logTime ? (
                           <Fragment>
                             <Tooltip title={translate('generic.lastSignal')}>
                               <Chip
@@ -98,8 +98,8 @@ class StatusItemBaseFlowLogger extends Component {
                                   </Avatar>
                                 }
                                 className={classes.chip}
-                                label={moment(dataLogger.logTime).format('YYYY-MM-DD HH:mm')}
-                                style={{ color: this.translateColor(dataLogger.alert) }}
+                                label={moment(dataload.logTime).format('YYYY-MM-DD HH:mm')}
+                                style={{ color: this.translateColor(dataload.alert) }}
                               />
                             </Tooltip>
                           </Fragment>
@@ -117,23 +117,23 @@ class StatusItemBaseFlowLogger extends Component {
                             />
                           </Tooltip>
                         )}
-                      </ListItemSecondaryAction>
+                      </ListItcardanoecondaryAction>
                     </ListItem>
                     <ListItem
                       button
-                      onClick={() => this.showStatistic(dataLogger._id)}
+                      onClick={() => this.showStatistic(dataload._id)}
                       className={classes.nested}
                       style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
-                      key={dataLogger._id}
+                      key={dataload._id}
                     >
-                      <ListItemSecondaryAction>
-                        {dataLogger.ntu ? (
+                      <ListItcardanoecondaryAction>
+                        {dataload.ntu ? (
                           <Fragment>
                             <Tooltip title={translate('generic.turbidity')}>
                               <Chip
                                 className={classes.chip}
-                                label={translate('generic.turbidity') + ': ' + `${dataLogger.ntu}`}
-                                style={{ color: this.translateColor(dataLogger.alert) }}
+                                label={translate('generic.turbidity') + ': ' + `${dataload.ntu}`}
+                                style={{ color: this.translateColor(dataload.alert) }}
                               />
                             </Tooltip>
                           </Fragment>
@@ -146,23 +146,23 @@ class StatusItemBaseFlowLogger extends Component {
                             />
                           </Tooltip>
                         )}
-                      </ListItemSecondaryAction>
+                      </ListItcardanoecondaryAction>
                     </ListItem>
                     <ListItem
                       button
-                      onClick={() => this.showStatistic(dataLogger._id)}
+                      onClick={() => this.showStatistic(dataload._id)}
                       className={classes.nested}
                       style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
-                      key={dataLogger._id}
+                      key={dataload._id}
                     >
-                      <ListItemSecondaryAction>
-                        {dataLogger.ph ? (
+                      <ListItcardanoecondaryAction>
+                        {dataload.ph ? (
                           <Fragment>
                             <Tooltip title={translate('generic.ph')}>
                               <Chip
                                 className={classes.chip}
-                                label={translate('generic.ph') + ': ' + `${dataLogger.ph}`}
-                                style={{ color: this.translateColor(dataLogger.alert) }}
+                                label={translate('generic.ph') + ': ' + `${dataload.ph}`}
+                                style={{ color: this.translateColor(dataload.alert) }}
                               />
                             </Tooltip>
                           </Fragment>
@@ -175,23 +175,23 @@ class StatusItemBaseFlowLogger extends Component {
                             />
                           </Tooltip>
                         )}
-                      </ListItemSecondaryAction>
+                      </ListItcardanoecondaryAction>
                     </ListItem>
                     <ListItem
                       button
-                      onClick={() => this.showStatistic(dataLogger._id)}
+                      onClick={() => this.showStatistic(dataload._id)}
                       className={classes.nested}
                       style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
-                      key={dataLogger._id}
+                      key={dataload._id}
                     >
-                      <ListItemSecondaryAction>
-                        {dataLogger.flowRate ? (
+                      <ListItcardanoecondaryAction>
+                        {dataload.flowRate ? (
                           <Fragment>
                             <Tooltip title={translate('generic.flowRate')}>
                               <Chip
                                 className={classes.chip}
-                                label={translate('generic.flowRate') + ': ' + `${dataLogger.flowRate}`}
-                                style={{ color: this.translateColor(dataLogger.alert) }}
+                                label={translate('generic.flowRate') + ': ' + `${dataload.flowRate}`}
+                                style={{ color: this.translateColor(dataload.alert) }}
                               />
                             </Tooltip>
                           </Fragment>
@@ -204,7 +204,7 @@ class StatusItemBaseFlowLogger extends Component {
                             />
                           </Tooltip>
                         )}
-                      </ListItemSecondaryAction>
+                      </ListItcardanoecondaryAction>
                     </ListItem>
                   </Fragment>
                 ))}
@@ -220,7 +220,7 @@ class StatusItemBaseFlowLogger extends Component {
   }
 }
 
-StatusItemBaseFlowLogger.propTypes = {
+StatusItemBaseFlowload.propTypes = {
   translate: PropTypes.func,
   getDmaPadding: PropTypes.func,
   currentStatus: PropTypes.array,
@@ -230,4 +230,4 @@ StatusItemBaseFlowLogger.propTypes = {
 };
 
 const enhance = compose(translate, connect(null, { push: pushAction }));
-export default enhance(StatusItemBaseFlowLogger);
+export default enhance(StatusItemBaseFlowload);

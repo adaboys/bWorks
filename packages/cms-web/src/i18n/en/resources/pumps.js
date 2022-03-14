@@ -1,6 +1,6 @@
 import commonFields from '../commomFields';
 export default {
-  name: 'Pump',
+  name: 'load',
   fields: {
     name: 'Name',
     prefix: 'Prefix',
@@ -11,7 +11,7 @@ export default {
     provinceId: 'Province',
     districtId: 'District',
     position: 'Position',
-    typeOfPump: 'Type Of pump',
+    typeOfload: 'Type Of load',
     powerCapacity: 'Power capacity (Kw)',
     maxDepth: 'MaxDepth (m)',
     maxHead: 'MaxHead (m)',
@@ -24,8 +24,8 @@ export default {
     dimensions: 'Dimensions: length, width, height (m)',
     bworksSourceId: 'bworks source',
     setupDate: 'Setup date',
-    surfacebworksPump: 'Surface bworks pump',
-    groundbworksPump: 'Ground bworks pump',
+    surfacebworksload: 'Surface bworks load',
+    groundbworksload: 'Ground bworks load',
     materialStatus: 'Material status',
     ...commonFields,
   },

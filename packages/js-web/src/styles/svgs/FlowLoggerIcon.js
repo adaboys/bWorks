@@ -1,6 +1,6 @@
 import React from 'react';
 import { SettingsRemote } from '@material-ui/icons';
 
-const FlowLoggerIcon = props => <SettingsRemote {...props} cache="FlowLogger" />;
+const FlowloadIcon = props => <SettingsRemote {...props} cache="Flowload" />;
 
-export default FlowLoggerIcon;
+export default FlowloadIcon;

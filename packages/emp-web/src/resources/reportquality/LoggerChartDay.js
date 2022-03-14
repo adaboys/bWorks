@@ -7,7 +7,7 @@ import { Card, CardHeader, CardContent, Typography, withTheme } from '@material-
 import moment from 'moment-timezone';
 import { ResponsiveContainer, AreaChart, XAxis, YAxis, Area, CartesianGrid, Label, Legend, Tooltip } from 'recharts';
 
-class LoggerChartDay extends Component {
+class loadChartDay extends Component {
   // eslint-disable-next-line no-unused-vars
   getTicks = data => {
     const result = [];
@@ -24,15 +24,15 @@ class LoggerChartDay extends Component {
     return result;
   };
 
-  renderChart({ logger, symbol, theme, translate }) {
-    if (logger.data && logger.data.length) {
+  renderChart({ load, symbol, theme, translate }) {
+    if (load.data && load.data.length) {
       return (
         <ResponsiveContainer width={'100%'} height={300}>
-          <AreaChart data={logger.data} margin={{ top: 30, right: 5, bottom: 30, left: 5 }}>
+          <AreaChart data={load.data} margin={{ top: 30, right: 5, bottom: 30, left: 5 }}>
             <XAxis
               dataKey="logTime"
               // scale="time"
-              // // ticks={this.getTicks(logger.data)}
+              // // ticks={this.getTicks(load.data)}
               tickFormatter={time => moment(time).format('L')}
               // type="number"
               // domain={['dataMin', 'dataMax']}
@@ -71,14 +71,14 @@ class LoggerChartDay extends Component {
       <Card>
         <CardHeader title={data.name} style={{ paddingBottom: 0 }} />
         <CardContent>
-          {data.loggers.map(logger => {
+          {data.loads.map(load => {
             return (
-              <Fragment key={logger.id}>
+              <Fragment key={load.id}>
                 <Typography gutterBottom variant="subtitle1">
-                  {`DataLogger: ${logger.name}`}
+                  {`Dataload: ${load.name}`}
                 </Typography>
                 <Typography variant="body1" component="div">
-                  {this.renderChart({ logger, symbol, theme, translate })}
+                  {this.renderChart({ load, symbol, theme, translate })}
                 </Typography>
               </Fragment>
             );
@@ -89,13 +89,13 @@ class LoggerChartDay extends Component {
   }
 }
 
-LoggerChartDay.propTypes = {
+loadChartDay.propTypes = {
   data: PropTypes.object.isRequired,
   translate: PropTypes.func,
   theme: PropTypes.object,
   symbol: PropTypes.string.isRequired,
 };
 
-const enhance = compose(translate, withTheme)(LoggerChartDay);
+const enhance = compose(translate, withTheme)(loadChartDay);
 
 export default enhance;

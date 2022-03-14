@@ -48,7 +48,7 @@ class MapStatus extends Component {
 MapStatus.propTypes = {
   dataProvider: PropTypes.func,
   currentStatus: PropTypes.array,
-  baseOnFlowLogger: PropTypes.bool,
+  baseOnFlowload: PropTypes.bool,
   theme: PropTypes.object.isRequired,
 };
 const enhance = compose(withDataProvider);

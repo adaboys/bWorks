@@ -4,12 +4,12 @@ import geoprovinces from './geoprovinces';
 import geodistricts from './geodistricts';
 import geowards from './geowards';
 import geoquarters from './geoquarters';
-import dataloggers from './dataloggers';
+import dataloads from './dataloads';
 import bworkssourcegroups from './bworkssourcegroups';
 import bworkssources from './bworkssources';
-import sensors from './sensors';
+import auto-matchers from './auto-matchers';
 import budgets from './budgets';
-import pumps from './pumps';
+import loads from './loads';
 import bworksstandards from './bworksstandards';
 import bworksparabudgets from './bworksparabudgets';
 import measuremethods from './measuremethods';
@@ -30,13 +30,13 @@ export default {
   geoprovinces,
   geodistricts,
   geowards,
-  dataloggers,
+  dataloads,
   geoquarters,
   bworkssourcegroups,
   bworkssources,
-  sensors,
+  auto-matchers,
   budgets,
-  pumps,
+  loads,
   bworksstandards,
   bworksparabudgets,
   measuremethods,

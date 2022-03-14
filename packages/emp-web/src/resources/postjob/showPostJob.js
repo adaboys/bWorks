@@ -44,7 +44,7 @@ class ShowPostJob extends Component {
               <TagsField label="Required skills" source="skills"></TagsField>
             </Grid>
             <Grid middle item xs={12} sm={12}>
-            <ArrayField source="subitems" label="Sub tasks">
+            <ArrayField source="subitcardano" label="Sub tasks">
     <SingleFieldList>
         <ChipField source="value" />
     </SingleFieldList>

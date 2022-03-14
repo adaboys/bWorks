@@ -7,7 +7,7 @@ import { FactoryIcon } from '../../../styles/Icons';
 import Icon from '@material-ui/icons/MoneyOutlined'
 import StatisticWidget from './StatisticWidget';
 
-class FlowLoggerStatisticWidget extends Component {
+class FlowloadStatisticWidget extends Component {
   constructor(props) {
     super(props);
     const { translate } = props;
@@ -28,11 +28,11 @@ class FlowLoggerStatisticWidget extends Component {
 
   /* loadStatus = () => {
         const { dataProvider } = this.props;
-        const { baseOnFlowLogger } = this.state;
+        const { baseOnFlowload } = this.state;
         dataProvider(CUSTOM, 'bworksSource', {
             subUrl: 'dashboard',
             method: 'get',
-            query: { mode: baseOnFlowLogger ? 'FlowLogger' : 'Dma' },
+            query: { mode: baseOnFlowload ? 'Flowload' : 'Dma' },
         }).then(res => {
             if (res) {
                 this.setState({ currentStatus: res.data });
@@ -67,9 +67,9 @@ class FlowLoggerStatisticWidget extends Component {
   }
 }
 
-FlowLoggerStatisticWidget.propTypes = {
+FlowloadStatisticWidget.propTypes = {
   translate: PropTypes.func,
   dataProvider: PropTypes.any,
 };
 const enhance = compose(translate, withDataProvider);
-export default enhance(FlowLoggerStatisticWidget);
+export default enhance(FlowloadStatisticWidget);

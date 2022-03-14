@@ -20,7 +20,7 @@ export default {
     operatingPressure: 'Operating pressure',
     environmentalRating: 'Environmental rating (IP)',
     description: 'Description',
-    dataLoggerId: 'DataLogger',
+    dataloadId: 'Dataload',
     bworksSourceId: 'bworks source',
     outputOptionsIds: 'Output options',
     materialStatus: 'Material status',

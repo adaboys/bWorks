@@ -73,7 +73,7 @@ class CreatePostJob extends Component {
               <DateTimeInput source="createdDate" label="Created date" defaultValue={moment()} disabled/>
             </Grid>
             <Grid middle item xs={12} sm={12}>
-              <ArrayInput source="subitems" label="Task breakdown">
+              <ArrayInput source="subitcardano" label="Task breakdown">
                 <SimpleFormIterator>
                   <TextInput label="Subtask" source="value" validate={[required()]} />
                 </SimpleFormIterator>

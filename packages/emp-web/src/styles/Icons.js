@@ -121,8 +121,8 @@ export {
   FormatListNumbered as bworksParabudgetIcon,
   FlipToBack as bworksSourceGroupIcon,
   WavesRounded as bworksSourceIcon,
-  BorderColor as SensorIcon,
-  Devices as DataLoggerIcon,
+  BorderColor as auto-matcherIcon,
+  Devices as DataloadIcon,
   AddAlert as AlertThresholdIcon,
   NotificationImportant as AlertbworksSourceIcon,
   DoneAll as NormalbworksSourceIcon,
@@ -144,13 +144,13 @@ export {
 } from '@material-ui/icons';
 
 export { default as FilterIcon } from './svgs/FilterIcon';
-export { default as FlowLoggerIcon } from './svgs/FlowLoggerIcon';
+export { default as FlowloadIcon } from './svgs/FlowloadIcon';
 export { default as budgetIcon } from './svgs/budgetIcon';
 export { default as NodeIcon } from './svgs/NodeIcon';
 export { default as PipeIcon } from './svgs/PipeIcon';
 export { default as PressureReducingIcon } from './svgs/PressureReducingIcon';
-export { default as PumpIcon } from './svgs/PumpIcon';
-export { default as QualityLoggerIcon } from './svgs/QualityLoggerIcon';
+export { default as loadIcon } from './svgs/loadIcon';
+export { default as QualityloadIcon } from './svgs/QualityloadIcon';
 export { default as TankIcon } from './svgs/TankIcon';
 export { default as ValveIcon } from './svgs/ValveIcon';
 export { default as AddTaskboardIcon } from './svgs/AddTaskboardIcon';

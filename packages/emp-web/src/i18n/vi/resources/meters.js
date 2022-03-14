@@ -20,7 +20,7 @@ export default {
     operatingPressure: 'Áp suất môi trường tối đa',
     environmentalRating: 'Cấp bảo vệ IP',
     description: 'Mô tả',
-    dataLoggerId: 'Thiết bị ghi/phát (data logger)',
+    dataloadId: 'Thiết bị ghi/phát (data load)',
     bworksSourceId: 'Dùng cho nguồn nước',
     outputOptionsIds: 'Giao tiếp đầu ra',
     materialStatus: 'Tình trạng',

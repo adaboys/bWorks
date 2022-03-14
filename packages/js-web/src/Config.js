@@ -122,18 +122,18 @@ export default {
   ],
   environmentalRating: [{ name: 'IP65' }, { name: 'IP66' }, { name: 'IP67' }, { name: 'IP68' }, { name: 'IP69' }],
   powerSource: [
-    { id: '1', name: 'resources.dataloggers.fields.gridPower' },
-    { id: '2', name: 'resources.dataloggers.fields.battery' },
-    { id: '3', name: 'resources.dataloggers.fields.solar' },
+    { id: '1', name: 'resources.dataloads.fields.gridPower' },
+    { id: '2', name: 'resources.dataloads.fields.battery' },
+    { id: '3', name: 'resources.dataloads.fields.solar' },
   ],
-  typeOfSensor: [
-    { id: '1', name: 'resources.sensors.fields.physical' },
-    { id: '2', name: 'resources.sensors.fields.chemical' },
-    { id: '3', name: 'resources.sensors.fields.bio' },
+  typeOfauto-matcher: [
+    { id: '1', name: 'resources.auto-matchers.fields.physical' },
+    { id: '2', name: 'resources.auto-matchers.fields.chemical' },
+    { id: '3', name: 'resources.auto-matchers.fields.bio' },
   ],
-  typeOfPump: [
-    { id: '1', name: 'resources.pumps.fields.surfacebworksPump' },
-    { id: '2', name: 'resources.pumps.fields.groundbworksPump' },
+  typeOfload: [
+    { id: '1', name: 'resources.loads.fields.surfacebworksload' },
+    { id: '2', name: 'resources.loads.fields.groundbworksload' },
   ],
   typeOfbworksSource: [
     { id: '1', name: 'resources.bworkssources.fields.surfacebworks' },
@@ -190,8 +190,8 @@ export default {
   selectAll: [{ id: 'all', name: 'generic.selectAll' }],
   selectMaterial: [
     { id: 'budget', name: 'generic.type.budget' },
-    { id: 'Sensor', name: 'generic.type.sensor' },
-    { id: 'Pump', name: 'generic.type.pump' },
-    { id: 'DataLogger', name: 'generic.type.dataLogger' },
+    { id: 'auto-matcher', name: 'generic.type.auto-matcher' },
+    { id: 'load', name: 'generic.type.load' },
+    { id: 'Dataload', name: 'generic.type.dataload' },
   ],
 };

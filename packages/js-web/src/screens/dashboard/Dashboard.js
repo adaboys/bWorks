@@ -8,18 +8,18 @@ import Table from './table.js';
 import LatestStatus from './LatestStatus';
 
 class Dashboard extends React.Component {
-  state = { currentStatus: [], baseOnFlowLogger: false };
+  state = { currentStatus: [], baseOnFlowload: false };
   componentDidMount() {
     this.loadStatus();
   }
 
   loadStatus = () => {
     const { dataProvider } = this.props;
-    let { baseOnFlowLogger } = this.state;
+    let { baseOnFlowload } = this.state;
     dataProvider(CUSTOM, 'bworksSources', {
       subUrl: 'dashboard',
       method: 'get',
-      query: { mode: baseOnFlowLogger ? 'dataLogger' : 'bworksSource' },
+      query: { mode: baseOnFlowload ? 'dataload' : 'bworksSource' },
     }).then(res => {
       if (res) {
         this.setState({ currentStatus: res.data });
@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
   onChangeDisPlay = (e, value) => {
     this.setState(
       {
-        baseOnFlowLogger: value,
+        baseOnFlowload: value,
       },
       this.loadStatus,
     );
@@ -38,7 +38,7 @@ class Dashboard extends React.Component {
 
   render() {
     const { theme } = this.props;
-    const { currentStatus, baseOnFlowLogger } = this.state;
+    const { currentStatus, baseOnFlowload } = this.state;
     return (
       <CustomPage title={'generic.pages.dashboard'}>
         <Grid container spacing={2}>
@@ -51,7 +51,7 @@ class Dashboard extends React.Component {
           <Grid item xs={12} md={3} style={{ display: 'flex' }}>
             <LatestStatus
               currentStatus={currentStatus}
-              baseOnFlowLogger={baseOnFlowLogger}
+              baseOnFlowload={baseOnFlowload}
               onChangeDisPlay={this.onChangeDisPlay}
             />
           </Grid>

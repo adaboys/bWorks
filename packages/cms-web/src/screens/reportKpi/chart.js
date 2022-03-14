@@ -159,7 +159,7 @@ class CreatePostJob extends Component {
 
     return (
       <div>
-        <Grid middle container spacing={4} direction="row" justifyContent="center" alignItems="center" >
+        <Grid middle container spacing={4} direction="row" justifyContent="center" alignItcardano="center" >
           <Grid middle item xs={12} sm={6} >
             <div>API calls</div>
             <br />

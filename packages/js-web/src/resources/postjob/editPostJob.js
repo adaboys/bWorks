@@ -47,7 +47,7 @@ class EditPartner extends Component {
               />
             </Grid>
             <Grid middle item xs={12} sm={12}>
-              <ArrayInput source="subitems" label="Task breakdown" disabled>
+              <ArrayInput source="subitcardano" label="Task breakdown" disabled>
                 <SimpleFormIterator disabled>
                   <TextInput label="Subtask" source="value" validate={[required()]} disabled/>
                 </SimpleFormIterator>

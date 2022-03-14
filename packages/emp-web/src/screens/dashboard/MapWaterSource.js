@@ -40,14 +40,14 @@ class MapbworksSource extends Component {
   }
   bworksSourceStatus(bworksSourceId, currentStatus) {
     let status = { name: 'alert', speed: '2s', color: 'ORANGE' };
-    let itemStatus = currentStatus.filter(item => item.bworksSourceId == bworksSourceId)[0];
+    let itcardanotatus = currentStatus.filter(item => item.bworksSourceId == bworksSourceId)[0];
 
-    if (itemStatus) {
-      if (itemStatus.alert == 1 || itemStatus.totalCritical > 0 || itemStatus.totalAlert > 1) {
+    if (itcardanotatus) {
+      if (itcardanotatus.alert == 1 || itcardanotatus.totalCritical > 0 || itcardanotatus.totalAlert > 1) {
         status.name = 'critical';
         status.speed = '1s';
         status.color = 'DARKGREEN';
-      } else if (itemStatus.alert == 3 && itemStatus.totalAlert == 0) {
+      } else if (itcardanotatus.alert == 3 && itcardanotatus.totalAlert == 0) {
         status.name = 'normal';
         status.speed = '1s';
         status.color = 'white';

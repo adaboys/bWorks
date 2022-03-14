@@ -1,6 +1,6 @@
 import commonFields from '../commomFields';
 export default {
-  name: 'DataLogger',
+  name: 'Dataload',
   fields: {
     name: 'Name',
     prefix: 'Prefix',

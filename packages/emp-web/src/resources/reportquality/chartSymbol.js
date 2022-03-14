@@ -7,8 +7,8 @@ import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
 import config from '../../Config';
-import LoggerChartHour from './LoggerChartHour.js';
-import LoggerChartDay from './LoggerChartDay.js';
+import loadChartHour from './loadChartHour.js';
+import loadChartDay from './loadChartDay.js';
 import FilterReportbworksSource from '../../components/common/filter/FilterReportbworksSource';
 const styles = theme => {
   return {
@@ -98,9 +98,9 @@ class ChartSymbol extends Component {
               {chartData &&
                 chartData.map(src =>
                   chartType === 'hour' ? (
-                    <LoggerChartHour key={src.id} data={src} symbol={selectedParamSymbol.toLowerCase()} />
+                    <loadChartHour key={src.id} data={src} symbol={selectedParamSymbol.toLowerCase()} />
                   ) : (
-                    <LoggerChartDay key={src.id} data={src} symbol={selectedParamSymbol.toLowerCase()} />
+                    <loadChartDay key={src.id} data={src} symbol={selectedParamSymbol.toLowerCase()} />
                   ),
                 )}
             </Grid>

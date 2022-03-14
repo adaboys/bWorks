@@ -2,14 +2,7 @@
   
   "version": "0.2.0",
   "configurations": [
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "ParseGeo",
-      "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/parse-geo"
-    },
-
+  
     {
       "type": "node",
       "request": "launch",
@@ -21,7 +14,7 @@
       
       "env": {
         "NODE_ENV": "development",
-        "DEFAULT_INVOICE_MAIL": "thangtn@bworks.vn",
+        "DEFAU_MAIL": "thangtn@bworks.vn",
         "ACTIVE_GOOGLE_MAP_API": "" // google geo location
       },
       "envFile": "${workspaceFolder}/.env"
@@ -47,8 +40,8 @@
         "NODE_INIT_TEST_DATA": "",
         "NODE_BACKUP_TEST_DATA": "",
         "NODE_RESTORE_TEST_DATA": "",
-        "NODE_EMS_LOGGER": "true",
-        "NODE_EMS_LOGGER_GENERATOR": "",
+        "NODE_cardano_load": "true",
+        "NODE_cardano_load_GENERATOR": "",
         "NODE_JOB": "true",
         "NODE_DEBUG_JOB": "",
         "NODE_LOG_STATISTIC_MAT": ""

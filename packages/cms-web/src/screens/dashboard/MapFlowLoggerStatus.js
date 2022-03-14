@@ -4,11 +4,11 @@ import { MapMaterialNode, withDataProvider, URL_ONLY } from 'bwork-libs';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { push as pushAction } from 'react-router-redux';
-class MapFlowLoggerStatus extends Component {
-  state = { loggerURL: '' };
+class MapFlowloadStatus extends Component {
+  state = { loadURL: '' };
   iconLink = status => {
     let url = this.props.dataProvider(URL_ONLY, 'icons', {
-      subUrl: 'dropView/FlowLoggerIcon',
+      subUrl: 'dropView/FlowloadIcon',
       query: { status },
       ignoreToken: true,
       abc: 'xyz',
@@ -16,8 +16,8 @@ class MapFlowLoggerStatus extends Component {
     return url;
   };
   // eslint-disable-next-line
-  onClickLogger = flowLogger => {
-    // this.props.push(`statisticFlowLogger/${flowLogger.id}`);
+  onClickload = flowload => {
+    // this.props.push(`statisticFlowload/${flowload.id}`);
   };
   render() {
     const { currentStatus, dataProvider, getStatus } = this.props;
@@ -25,15 +25,15 @@ class MapFlowLoggerStatus extends Component {
       return (
         <Fragment>
           {currentStatus.map(dma => {
-            if (dma.flowLoggers && dma.flowLoggers.length > 0) {
-              return dma.flowLoggers.map(flowLogger => {
-                let status = getStatus(flowLogger);
+            if (dma.flowloads && dma.flowloads.length > 0) {
+              return dma.flowloads.map(flowload => {
+                let status = getStatus(flowload);
                 return (
                   <MapMaterialNode
-                    key={flowLogger.id}
-                    data={flowLogger}
-                    model="FlowLogger"
-                    onClick={() => this.onClickLogger(flowLogger)}
+                    key={flowload.id}
+                    data={flowload}
+                    model="Flowload"
+                    onClick={() => this.onClickload(flowload)}
                     marker={{ options: {} }}
                     icon={this.iconLink(status)}
                     dataProvider={dataProvider}
@@ -50,7 +50,7 @@ class MapFlowLoggerStatus extends Component {
   }
 }
 
-MapFlowLoggerStatus.propTypes = {
+MapFlowloadStatus.propTypes = {
   theme: PropTypes.object,
   currentStatus: PropTypes.array,
   getStatus: PropTypes.func,
@@ -58,4 +58,4 @@ MapFlowLoggerStatus.propTypes = {
   push: PropTypes.func,
 };
 const enhance = compose(withDataProvider, connect(null, { push: pushAction }));
-export default enhance(MapFlowLoggerStatus);
+export default enhance(MapFlowloadStatus);
