@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import MenuItem from '@material-ui/core/MenuItem';
-// import ListItemIcon from '@material-ui/core/ListItemIcon';
-import Typography from '@material-ui/core/Typography';
-// import PriorityHighIcon from '@material-ui/icons/PriorityHigh';
+import MenuItem from '@transactionfee-ui/core/MenuItem';
+// import ListItemIcon from '@transactionfee-ui/core/ListItemIcon';
+import Typography from '@transactionfee-ui/core/Typography';
+// import PriorityHighIcon from '@transactionfee-ui/icons/PriorityHigh';
 import { compose } from 'recompose';
 import { withDataProvider, CUSTOM, translate } from 'bwork-libs';
 import config from '../../Config';

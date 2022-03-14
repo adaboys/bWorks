@@ -10,10 +10,10 @@ import {
   TimeRangeInput,
   SelectArrayInput,
 } from 'bwork-libs';
-import { withStyles, withTheme } from '@material-ui/core/styles';
+import { withStyles, withTheme } from '@transactionfee-ui/core/styles';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
-import { Grid, Paper } from '@material-ui/core';
+import { Grid, Paper } from '@transactionfee-ui/core';
 import { StatisticButtonIcon, PrintIcon } from '../../../styles/Icons';
 import config from '../../../Config';
 import get from 'lodash/get';
@@ -51,7 +51,7 @@ class FilterReportbworksSource extends Component {
     };
   }
   componentDidMount() {
-    const { showbworksParabudget, flgMaterial } = this.props;
+    const { showbworksParabudget, flgtransactionfee } = this.props;
 
     this.getAllbworksGroups();
     this.getAllbworksSources();
@@ -60,7 +60,7 @@ class FilterReportbworksSource extends Component {
       this.getbworksParams();
     }
 
-    if (flgMaterial) {
+    if (flgtransactionfee) {
       let conditionChoices = this.filterConditions.filter(item => item.id == '1')[0].conditions;
       this.setState({ conditionChoices: conditionChoices, selectedConditionType: '1' }, () => this.submitFilter());
     }
@@ -172,11 +172,11 @@ class FilterReportbworksSource extends Component {
 
     this.setState({ conditionChoices: conditionChoices, selectedConditionType: val });
   };
-  onChangeSelectMaterial = (e, val) => {
+  onChangeSelecttransactionfee = (e, val) => {
     const { change, formName } = this.props;
     //let conditionChoices = this.filterConditions.filter(item => item.id == val)[0].conditions;
 
-    change(formName, 'selectMaterial', val); // set default
+    change(formName, 'selecttransactionfee', val); // set default
 
     // this.setState({ conditionChoices: conditionChoices, selectedConditionType: val });
   };
@@ -186,7 +186,7 @@ class FilterReportbworksSource extends Component {
 
   submitFilter = () => {
     let { selectedbworksSources, selectedParamSymbol, selectedbworksParam } = this.state;
-    let { showbworksParabudget, flgMaterial, flgDetail, flgChart, queryReport } = this.props;
+    let { showbworksParabudget, flgtransactionfee, flgDetail, flgChart, queryReport } = this.props;
 
     let filter = {};
 
@@ -221,13 +221,13 @@ class FilterReportbworksSource extends Component {
       queryReport(filter);
     }
 
-    // filter of report material
-    if (flgMaterial) {
+    // filter of report transactionfee
+    if (flgtransactionfee) {
       filter.selectedbworksSources = arr;
       filter.conditionType = get(tmp, 'selectType');
       filter.selectConditions = get(tmp, 'selectCondition');
-      filter.selectMaterial = get(tmp, 'selectMaterial');
-      // console.log('after format filter material: ', filter);
+      filter.selecttransactionfee = get(tmp, 'selecttransactionfee');
+      // console.log('after format filter transactionfee: ', filter);
       queryReport(filter);
     }
     // this.setState({ filter: filter });
@@ -242,7 +242,7 @@ class FilterReportbworksSource extends Component {
       formName,
       hasPrint,
       defaultFilter,
-      flgMaterial,
+      flgtransactionfee,
     } = this.props;
 
     let { allbworksSourceGroups, bworksSourceChoices, allbworksParams, filter, conditionChoices } = this.state;
@@ -253,14 +253,14 @@ class FilterReportbworksSource extends Component {
           <Grid middle container>
             <SelectInput
               source="sourceGroup"
-              label={translate('resources.reportmaterials.fields.selectGroup')}
+              label={translate('resources.reporttransactionfees.fields.selectGroup')}
               choices={allbworksSourceGroups}
               style={{ marginLeft: '5px', marginTop: '25px' }}
               onChange={this.onChangeSourceGroup}
             />
             <SelectInput
               source="bworksSource"
-              label={translate('resources.reportmaterials.fields.selectSource')}
+              label={translate('resources.reporttransactionfees.fields.selectSource')}
               choices={bworksSourceChoices}
               style={{ marginLeft: '5px', marginTop: '25px' }}
               onChange={this.onChangebworksSource}
@@ -275,26 +275,26 @@ class FilterReportbworksSource extends Component {
                 onChange={this.onChangebworksParabudget}
               />
             )}
-            {flgMaterial && (
+            {flgtransactionfee && (
               <Fragment>
                 <SelectInput
-                  source="selectMaterial"
-                  label={translate('resources.reportmaterials.fields.selectMaterial')}
-                  choices={config.selectMaterial}
+                  source="selecttransactionfee"
+                  label={translate('resources.reporttransactionfees.fields.selecttransactionfee')}
+                  choices={config.selecttransactionfee}
                   style={{ marginLeft: '5px' }}
-                  onChange={this.onChangeSelectMaterial}
+                  onChange={this.onChangeSelecttransactionfee}
                 />
 
                 <SelectInput
                   source="selectType"
-                  label={translate('resources.reportmaterials.fields.selectType')}
+                  label={translate('resources.reporttransactionfees.fields.selectType')}
                   choices={this.conditionTypes}
                   style={{ marginLeft: '5px' }}
                   onChange={this.onChangeSelectType}
                 />
 
                 <SelectArrayInput
-                  label={translate('resources.reportmaterials.fields.selectCondition')}
+                  label={translate('resources.reporttransactionfees.fields.selectCondition')}
                   choices={conditionChoices}
                   source="selectCondition"
                   style={{ marginLeft: '5px', width: '200px' }}
@@ -303,7 +303,7 @@ class FilterReportbworksSource extends Component {
               </Fragment>
             )}
 
-            {!flgMaterial && (
+            {!flgtransactionfee && (
               <TimeRangeInput
                 style={{ marginLeft: '5px', marginTop: '25px' }}
                 fullWidth
@@ -354,7 +354,7 @@ FilterReportbworksSource.propTypes = {
 
   showbworksParabudget: PropTypes.bool, // show parabudget bworks
 
-  flgMaterial: PropTypes.bool, // filter of report material
+  flgtransactionfee: PropTypes.bool, // filter of report transactionfee
   flgChart: PropTypes.bool, // filter of chart
   flgDetail: PropTypes.bool, // filter of list
 };
@@ -367,7 +367,7 @@ FilterReportbworksSource.defaultProps = {
   showbworksParabudget: false,
 
   flgDetail: false,
-  flgMaterial: false,
+  flgtransactionfee: false,
   flgChart: false,
 };
 const enhance = compose(connect(null, { change }), withTheme, withStyles(styles), translate, withDataProvider);

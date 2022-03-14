@@ -30,10 +30,10 @@ export default {
   yourOffers: "Your offers",
   wonBid: "Won bids",
   search: 'Search',
-  material: 'Material',
+  transactionfee: 'transactionfee',
   show: 'Show',
   file: 'File',
-  dma: 'DMA',
+  epoch: 'epoch',
   total: 'Total',
   node: 'Location node',
   issue: 'Issue',
@@ -84,7 +84,7 @@ export default {
   pages: {
     changePassword: 'Change password',
     jobManagement: "Post job",
-    bidManagement: "Manage bids",
+    biepochnagement: "Manage bids",
     deposit: "Deposit",
     withdraw: "Withdraw",
     PostJob: "Post job",
@@ -172,7 +172,7 @@ export default {
     many: 'High',
     less: 'Low',
   },
-  conclusionMatDma: {
+  conclusionMatepoch: {
     many: 'High',
     less: 'Low',
   },

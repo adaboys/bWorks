@@ -16,7 +16,7 @@ export default {
     manufacturedDate: 'Manufactured date',
     setupDate: 'Setup date',
     operatingTemperature: 'Operating temperature (°C)',
-    operatingPressure: 'Operating pressure (Bar)',
+    operatingtime: 'Operating time (Bar)',
     environmentalRating: 'Environmental rating (IP)',
     hasBuiltinDataload: 'Has Builtin dataload',
     powerSource: 'Power source',
@@ -32,7 +32,7 @@ export default {
     physical: 'Physical',
     chemical: 'Chemical',
     bio: 'Bio',
-    materialStatus: 'Status',
+    transactionfeeStatus: 'Status',
     ...commonFields,
   },
   auto-matcherProbe: {

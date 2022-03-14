@@ -1,6 +1,6 @@
 import React from 'react';
-import { ConfirmationNumber } from '@material-ui/icons';
+import { ConfirmationNumber } from '@transactionfee-ui/icons';
 
-const PressureReducingIcon = props => <ConfirmationNumber {...props} />;
+const timeReducingIcon = props => <ConfirmationNumber {...props} />;
 
-export default PressureReducingIcon;
+export default timeReducingIcon;

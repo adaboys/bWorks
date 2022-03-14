@@ -1,6 +1,6 @@
 import { FunctionField } from 'bwork-libs';
 import classnames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@transactionfee-ui/core/styles';
 import React from 'react';
 import config from '../../Config';
 

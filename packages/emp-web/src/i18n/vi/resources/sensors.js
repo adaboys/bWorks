@@ -15,7 +15,7 @@ export default {
     manufacturedDate: 'Ngày sản xuất',
     setupDate: 'Ngày lắp đặt',
     operatingTemperature: 'Nhiệt độ hoạt động (°C)',
-    operatingPressure: 'Áp suất tối đa (Bar)',
+    operatingtime: 'Áp suất tối đa (Bar)',
     environmentalRating: 'Cấp IP',
     hasBuiltinDataload: 'Có tích hợp data load',
     powerSource: 'Nguồn điện',
@@ -31,7 +31,7 @@ export default {
     physical: 'Vật lý',
     chemical: 'Hoá học',
     bio: 'Sinh học',
-    materialStatus: 'Tình trạng',
+    transactionfeeStatus: 'Tình trạng',
     ...commonFields,
   },
   auto-matcherProbe: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CropDin } from '@material-ui/icons';
+import { CropDin } from '@transactionfee-ui/icons';
 
 const TankIcon = props => <CropDin {...props} />;
 

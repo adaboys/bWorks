@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import shouldUpdate from 'recompose/shouldUpdate';
-import { fade } from '@material-ui/core/styles/colorManipulator';
+import { fade } from '@transactionfee-ui/core/styles/colorManipulator';
 import { Link, linkToRecord, translate } from 'bwork-libs';
-import Button from '@material-ui/core/Button';
+import Button from '@transactionfee-ui/core/Button';
 import classnames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@transactionfee-ui/core/styles';
 import { compose } from 'recompose';
 const styles = theme => ({
   CustomButton: {

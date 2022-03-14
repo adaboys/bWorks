@@ -17,7 +17,7 @@ import interfacestandards from './interfacestandards';
 import srcconfigs from './srcconfigs';
 import alertthresholds from './alertthresholds';
 import reportqualities from './reportqualities';
-import reportmaterials from './reportmaterials';
+import reporttransactionfees from './reporttransactionfees';
 import reportsummarizedqualities from './reportsummarizedqualities';
 import reportvolumes from './reportvolumes';
 import reportflows from './reportflows';
@@ -44,7 +44,7 @@ export default {
   srcconfigs,
   alertthresholds,
   reportqualities,
-  reportmaterials,
+  reporttransactionfees,
   reportsummarizedqualities,
   reportvolumes,
   reportflows,

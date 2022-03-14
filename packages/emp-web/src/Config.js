@@ -23,7 +23,7 @@ export default {
       alert: '#fbc02d',
       criticalAlert: '#a31545',
     },
-    flowPressureChart: [
+    flowtimeChart: [
       '#3F51B5',
       '#4dbd74',
       '#FF9800',

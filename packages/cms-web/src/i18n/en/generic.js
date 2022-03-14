@@ -31,10 +31,10 @@ export default {
   topMatchingJobs: "Bidding status",
   wonBid: "Won bids",
   search: 'Search',
-  material: 'Material',
+  transactionfee: 'transactionfee',
   show: 'Show',
   file: 'File',
-  dma: 'DMA',
+  epoch: 'epoch',
   total: 'Total',
   node: 'Location node',
   issue: 'Issue',
@@ -172,7 +172,7 @@ export default {
     many: 'High',
     less: 'Low',
   },
-  conclusionMatDma: {
+  conclusionMatepoch: {
     many: 'High',
     less: 'Low',
   },

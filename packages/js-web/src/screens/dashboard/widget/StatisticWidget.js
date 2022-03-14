@@ -12,9 +12,9 @@ import {
   ListItcardanoecondaryAction,
   Divider,
   List,
-} from '@material-ui/core';
-import { withStyles, withTheme } from '@material-ui/core/styles';
-import { Assignment as DefaultIcon } from '@material-ui/icons';
+} from '@transactionfee-ui/core';
+import { withStyles, withTheme } from '@transactionfee-ui/core/styles';
+import { Assignment as DefaultIcon } from '@transactionfee-ui/icons';
 
 const styles = theme => ({
   avatar: {

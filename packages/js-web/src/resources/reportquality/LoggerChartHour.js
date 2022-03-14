@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { translate } from 'bwork-libs';
 // import round from 'lodash/round';
-import { Card, CardHeader, CardContent, Typography, withTheme } from '@material-ui/core';
+import { Card, CardHeader, CardContent, Typography, withTheme } from '@transactionfee-ui/core';
 import moment from 'moment-timezone';
 import { ResponsiveContainer, LineChart, XAxis, YAxis, Line, CartesianGrid, Label, Legend, Tooltip } from 'recharts';
 // import format from '../../util/format';

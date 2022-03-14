@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { translate } from 'bwork-libs';
-import { Card, CardHeader, CardContent, Typography, withTheme } from '@material-ui/core';
+import { Card, CardHeader, CardContent, Typography, withTheme } from '@transactionfee-ui/core';
 import moment from 'moment-timezone';
 import { ScatterChart, Scatter, XAxis, YAxis, Tooltip, ZAxis, Cell, ResponsiveContainer, Legend } from 'recharts';
 import config from '../../Config';

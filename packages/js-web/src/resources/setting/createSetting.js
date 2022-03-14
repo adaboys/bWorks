@@ -10,7 +10,7 @@ import {
   EditorInput,
   DateTimeInput,
 } from 'bwork-libs';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@transactionfee-ui/core';
 import compose from 'recompose/compose';
 
 class CreatePostJob extends Component {

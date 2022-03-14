@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgIcon } from '@material-ui/core';
+import { SvgIcon } from '@transactionfee-ui/core';
 
 const budgetIcon = props => (
   <SvgIcon viewBox="0 0 1000 1000" {...props}>

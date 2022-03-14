@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { CustomPage, withDataProvider, CUSTOM } from 'bwork-libs';
-import { Grid, withTheme } from '@material-ui/core';
+import { Grid, withTheme } from '@transactionfee-ui/core';
 import TopStatistic from './widget/TopStatistic';
 import Table from './table.js';
 import LatestStatus from './LatestStatus';

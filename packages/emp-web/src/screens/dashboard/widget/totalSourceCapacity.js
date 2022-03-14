@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { translate, withDataProvider, CUSTOM } from 'bwork-libs';
-import green from '@material-ui/core/colors/green';
+import green from '@transactionfee-ui/core/colors/green';
 import { QuantityIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { CustomPage } from 'bwork-libs';
-import { withStyles, withTheme } from '@material-ui/core/styles';
+import { withStyles, withTheme } from '@transactionfee-ui/core/styles';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@transactionfee-ui/core';
 // import ReportFilter from './reportFilter';
 import ChartAndList from './chartAndList';
 import FilterReportbworksSource from '../../components/common/filter/FilterReportbworksSource';
@@ -23,7 +23,7 @@ class ReportMain extends Component {
     sourceGroup: 'all',
     bworksSource: 'all',
     selectType: '1',
-    selectMaterial: config.selectMaterial[0].id,
+    selecttransactionfee: config.selecttransactionfee[0].id,
     selectCondition: config.filterConditions.filter(item => item.id == '1')[0].conditions.map(item => item.id),
   };
   state = {
@@ -48,12 +48,12 @@ class ReportMain extends Component {
           <Grid item xs={12} sm={12}>
             {/* <ReportFilter queryReport={this.queryReport} handlePrint={this.handlePrint} /> */}
             <FilterReportbworksSource
-              formName={'wsrc-filter-report-material-detail'}
+              formName={'wsrc-filter-report-transactionfee-detail'}
               defaultFilter={this.defaultFilter}
               queryReport={this.queryReport}
               handlePrint={this.handlePrint}
               hasPrint={false}
-              flgMaterial={true}
+              flgtransactionfee={true}
               flgDetail={false}
               flgChart={false}
             />

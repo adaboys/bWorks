@@ -26,7 +26,7 @@ export default {
     setupDate: 'Ngày lắp đặt',
     surfacebworksload: 'Bơm nước mặt',
     groundbworksload: 'Bơm giếng ngầm',
-    materialStatus: 'Tình trạng',
+    transactionfeeStatus: 'Tình trạng',
     ...commonFields,
   },
   list: 'Danh sách',

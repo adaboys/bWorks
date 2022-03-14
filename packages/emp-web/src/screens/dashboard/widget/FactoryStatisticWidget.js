@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { translate, withDataProvider, CUSTOM } from 'bwork-libs';
-import blue from '@material-ui/core/colors/blue';
+import blue from '@transactionfee-ui/core/colors/blue';
 import { FactoryIcon } from '../../../styles/Icons';
 import StatisticWidget from './StatisticWidget';
 
@@ -31,7 +31,7 @@ class FlowloadStatisticWidget extends Component {
         dataProvider(CUSTOM, 'bworksSource', {
             subUrl: 'dashboard',
             method: 'get',
-            query: { mode: baseOnFlowload ? 'Flowload' : 'Dma' },
+            query: { mode: baseOnFlowload ? 'Flowload' : 'epoch' },
         }).then(res => {
             if (res) {
                 this.setState({ currentStatus: res.data });

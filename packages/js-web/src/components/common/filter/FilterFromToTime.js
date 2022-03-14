@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
 import { FlexFormFilter, withDataProvider, translate, MonthInput } from 'bwork-libs';
-import { Grid, withStyles } from '@material-ui/core';
+import { Grid, withStyles } from '@transactionfee-ui/core';
 import { connect } from 'react-redux';
 import moment from 'moment-timezone';
 const styles = () => ({

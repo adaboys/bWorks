@@ -12,7 +12,7 @@ import {
   DateTimeInput,
   NumberInput,
 } from 'bwork-libs';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@transactionfee-ui/core';
 import compose from 'recompose/compose';
 import config from '../../Config';
 

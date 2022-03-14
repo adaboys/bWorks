@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgIcon } from '@material-ui/core';
+import { SvgIcon } from '@transactionfee-ui/core';
 
 const QualityloadIcon = props => (
   <SvgIcon {...props} viewBox="0 0 301.605 301.605">

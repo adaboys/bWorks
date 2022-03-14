@@ -1,5 +1,5 @@
 import React from 'react';
-import { SettingsRemote } from '@material-ui/icons';
+import { SettingsRemote } from '@transactionfee-ui/icons';
 
 const FlowloadIcon = props => <SettingsRemote {...props} cache="Flowload" />;
 

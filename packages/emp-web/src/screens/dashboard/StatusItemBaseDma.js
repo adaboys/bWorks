@@ -12,7 +12,7 @@ import {
   Avatar,
   Divider,
   List,
-} from '@material-ui/core';
+} from '@transactionfee-ui/core';
 import { translate } from 'bwork-libs';
 import config from '../../Config';
 import { NormalbworksSourceIcon, AlertbworksSourceIcon, LogTimeIcon, bworksSourceIcon } from '../../styles/Icons';
@@ -33,7 +33,7 @@ const translateColor = alert => {
   }
 };
 
-const StatusItemBaseDma = ({ currentStatus, classes, translate, theme, getDmaPadding }) => {
+const StatusItemBaseepoch = ({ currentStatus, classes, translate, theme, getepochPadding }) => {
   // console.log('currentStatus', currentStatus);
   // if (!currentStatus || currentStatus.length < 1 || !currentStatus[0].logTime) {
   //   return null;
@@ -48,7 +48,7 @@ let currentStatus1 = [
     <List component="div" disablePadding>
       {currentStatus1.map(bworksSource => (
         <Fragment key={bworksSource.bworksSourceName}>
-          <ListItem button style={{ paddingLeft: getDmaPadding({ level: 1 }) }} key={bworksSource.bworksSourceName}>
+          <ListItem button style={{ paddingLeft: getepochPadding({ level: 1 }) }} key={bworksSource.bworksSourceName}>
             <ListItemIcon>
               <bworksSourceIcon />
             </ListItemIcon>
@@ -73,13 +73,13 @@ let currentStatus1 = [
               </Tooltip>
             </ListItcardanoecondaryAction>
           </ListItem>
-          <Divider style={{ marginLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }} />
+          <Divider style={{ marginLeft: getepochPadding({ level: 2 }) + theme.spacing(1) }} />
 
           <ListItem
             button
             onClick={() => this.showStatistic(bworksSource.bworksSourceName)}
             className={classes.nested}
-            style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
+            style={{ paddingLeft: getepochPadding({ level: 2 }) + theme.spacing(1) }}
             key={bworksSource.logTime}
           >
             <ListItcardanoecondaryAction>
@@ -105,7 +105,7 @@ let currentStatus1 = [
             button
             onClick={() => this.showStatistic(bworksSource.bworksSourceName)}
             className={classes.nested}
-            style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
+            style={{ paddingLeft: getepochPadding({ level: 2 }) + theme.spacing(1) }}
             key={bworksSource.totalFlowRate}
           >
             <ListItcardanoecondaryAction>
@@ -126,7 +126,7 @@ let currentStatus1 = [
             button
             onClick={() => this.showStatistic(bworksSource.bworksSourceName)}
             className={classes.nested}
-            style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
+            style={{ paddingLeft: getepochPadding({ level: 2 }) + theme.spacing(1) }}
             key={bworksSource.avgNtu}
           >
             <ListItcardanoecondaryAction>
@@ -150,8 +150,8 @@ let currentStatus1 = [
   );
 };
 
-StatusItemBaseDma.propTypes = {
-  getDmaPadding: PropTypes.func,
+StatusItemBaseepoch.propTypes = {
+  getepochPadding: PropTypes.func,
   currentStatus: PropTypes.array,
   classes: PropTypes.object,
   theme: PropTypes.object,
@@ -159,4 +159,4 @@ StatusItemBaseDma.propTypes = {
 };
 
 const enhance = compose(translate);
-export default enhance(StatusItemBaseDma);
+export default enhance(StatusItemBaseepoch);

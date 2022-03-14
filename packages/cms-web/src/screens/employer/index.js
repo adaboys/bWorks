@@ -4,7 +4,7 @@ import CreatePostJob from '../../resources/postjob/createPostJob';
 import EditPostJob from '../../resources/postjob/editPostJob';
 import ShowPostJob from '../../resources/postjob/showPostJob';
 
-import AdfScannerIcon from '@material-ui/icons/WorkOutline';
+import AdfScannerIcon from '@transactionfee-ui/icons/WorkOutline';
 
 
 export default {

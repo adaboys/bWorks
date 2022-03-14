@@ -1,7 +1,7 @@
 import config from '../Config';
 const initData = {
   viewSelected: [],
-  viewDmaId: '',
+  viewepochId: '',
   update: 0,
   defaultZoom: config.mapDefaultZoom,
   defaultCenter: config.mapDefaultCenter,

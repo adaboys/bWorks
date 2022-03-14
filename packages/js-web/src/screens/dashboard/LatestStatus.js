@@ -11,11 +11,11 @@ import {
   Avatar,
   Checkbox,
   FormControlLabel,
-} from '@material-ui/core';
+} from '@transactionfee-ui/core';
 import { withDataProvider, translate } from 'bwork-libs';
 
 import { StatusIcon } from '../../styles/Icons';
-import StatusItemBaseDma from './StatusItemBaseDma';
+import StatusItemBaseepoch from './StatusItemBaseepoch';
 import StatusItemBaseFlowload from './StatusItemBaseFlowload';
 
 const styles = theme => {
@@ -49,15 +49,15 @@ const styles = theme => {
       width: 24,
       height: 24,
     },
-    dmaItem: {
+    epochItem: {
       paddingLeft: theme.spacing(1),
       paddingRight: theme.spacing(1),
     },
   };
 };
 class LatestStatus extends Component {
-  getDmaPadding = dma => {
-    return (dma.level * 2 - 2) * this.props.theme.spacing(1);
+  getepochPadding = epoch => {
+    return (epoch.level * 2 - 2) * this.props.theme.spacing(1);
   };
 
   render() {
@@ -78,21 +78,21 @@ class LatestStatus extends Component {
             />
           }
         />
-        <CardContent className={classes.dmaItem}>
+        <CardContent className={classes.epochItem}>
           <Divider />
           {baseOnFlowload ? (
             <StatusItemBaseFlowload
               currentStatus={currentStatus}
               classes={classes}
               theme={theme}
-              getDmaPadding={this.getDmaPadding}
+              getepochPadding={this.getepochPadding}
             />
           ) : (
-            <StatusItemBaseDma
+            <StatusItemBaseepoch
               currentStatus={currentStatus}
               classes={classes}
               theme={theme}
-              getDmaPadding={this.getDmaPadding}
+              getepochPadding={this.getepochPadding}
             />
           )}
         </CardContent>

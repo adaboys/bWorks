@@ -10,7 +10,7 @@ import {
   List,
   ListItcardanoecondaryAction,
   ListItemIcon,
-} from '@material-ui/core';
+} from '@transactionfee-ui/core';
 import moment from 'moment-timezone';
 import { translate } from 'bwork-libs';
 import { compose } from 'recompose';
@@ -41,7 +41,7 @@ class StatusItemBaseFlowload extends Component {
     }
   }
   render() {
-    const { currentStatus, classes, theme, getDmaPadding, translate } = this.props;
+    const { currentStatus, classes, theme, getepochPadding, translate } = this.props;
     // if (!currentStatus[0].dataloads || currentStatus[0].dataloads.length < 1) {
     //   return null;
     // }
@@ -50,7 +50,7 @@ class StatusItemBaseFlowload extends Component {
       <List component="div" disablePadding>
         {currentStatus.map((bworksSource, index) => (
           <Fragment key={bworksSource.bworksSourceName}>
-            <ListItem button style={{ paddingLeft: getDmaPadding({ level: 1 }) }} key={bworksSource.bworksSourceName}>
+            <ListItem button style={{ paddingLeft: getepochPadding({ level: 1 }) }} key={bworksSource.bworksSourceName}>
               <ListItemIcon>
                 <bworksSourceIcon />
               </ListItemIcon>
@@ -73,12 +73,12 @@ class StatusItemBaseFlowload extends Component {
               <List component="div" disablePadding>
                 {bworksSource.dataloads.map(dataload => (
                   <Fragment key={dataload._id}>
-                    <Divider style={{ marginLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }} />
+                    <Divider style={{ marginLeft: getepochPadding({ level: 2 }) + theme.spacing(1) }} />
                     <ListItem
                       button
                       onClick={() => this.showStatistic(dataload._id)}
                       className={classes.nested}
-                      style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
+                      style={{ paddingLeft: getepochPadding({ level: 2 }) + theme.spacing(1) }}
                       key={dataload._id}
                     >
                       <ListItemText
@@ -123,7 +123,7 @@ class StatusItemBaseFlowload extends Component {
                       button
                       onClick={() => this.showStatistic(dataload._id)}
                       className={classes.nested}
-                      style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
+                      style={{ paddingLeft: getepochPadding({ level: 2 }) + theme.spacing(1) }}
                       key={dataload._id}
                     >
                       <ListItcardanoecondaryAction>
@@ -152,7 +152,7 @@ class StatusItemBaseFlowload extends Component {
                       button
                       onClick={() => this.showStatistic(dataload._id)}
                       className={classes.nested}
-                      style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
+                      style={{ paddingLeft: getepochPadding({ level: 2 }) + theme.spacing(1) }}
                       key={dataload._id}
                     >
                       <ListItcardanoecondaryAction>
@@ -181,7 +181,7 @@ class StatusItemBaseFlowload extends Component {
                       button
                       onClick={() => this.showStatistic(dataload._id)}
                       className={classes.nested}
-                      style={{ paddingLeft: getDmaPadding({ level: 2 }) + theme.spacing(1) }}
+                      style={{ paddingLeft: getepochPadding({ level: 2 }) + theme.spacing(1) }}
                       key={dataload._id}
                     >
                       <ListItcardanoecondaryAction>
@@ -211,7 +211,7 @@ class StatusItemBaseFlowload extends Component {
               </List>
             )}
             {index < Array.isArray(currentStatus) && currentStatus.length - 1 && (
-              <Divider style={{ marginLeft: getDmaPadding({ level: 1 }) }} />
+              <Divider style={{ marginLeft: getepochPadding({ level: 1 }) }} />
             )}
           </Fragment>
         ))}
@@ -222,7 +222,7 @@ class StatusItemBaseFlowload extends Component {
 
 StatusItemBaseFlowload.propTypes = {
   translate: PropTypes.func,
-  getDmaPadding: PropTypes.func,
+  getepochPadding: PropTypes.func,
   currentStatus: PropTypes.array,
   classes: PropTypes.object,
   theme: PropTypes.object,

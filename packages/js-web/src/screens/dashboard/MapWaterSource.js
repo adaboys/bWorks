@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withDataProvider, CUSTOM, MapPipe } from 'bwork-libs';
 import bworksSourceMarker from './bworksSourceMarker';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@transactionfee-ui/core/styles';
 import { compose } from 'recompose';
 const style = theme => ({
   options: { strokeColor: theme.pipe.edit },

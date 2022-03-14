@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { CustomPage } from 'bwork-libs';
-import { withStyles, withTheme } from '@material-ui/core/styles';
+import { withStyles, withTheme } from '@transactionfee-ui/core/styles';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@transactionfee-ui/core';
 // import ReportFilter from './reportFilter';
 import ChartAndList from './chartAndList';
 import FilterReportbworksSource from '../../components/common/filter/FilterReportbworksSource';
@@ -62,7 +62,7 @@ class ReportMain extends Component {
               hasPrint={false}
               typeTimes={['hour', 'day', 'month', 'year']}
               showbworksParabudget={true}
-              flgMaterial={false}
+              flgtransactionfee={false}
               flgDetail={true}
               flgChart={false}
             />

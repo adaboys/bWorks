@@ -1,5 +1,5 @@
 import React from 'react';
-import { Crop75 } from '@material-ui/icons';
+import { Crop75 } from '@transactionfee-ui/icons';
 
 const PipeIcon = props => <Crop75 {...props} />;
 

@@ -23,7 +23,7 @@ import BiddingJob from '../screens/bidjobs';
 import smartContract from '../screens/contractedjobs';
 import ReportKpi from '../screens/reportKpi';
 import SourceTemplate from '../screens/changepassword';
-import AdfScannerIcon from '@material-ui/icons/AccountBoxOutlined';
+import AdfScannerIcon from '@transactionfee-ui/icons/AccountBoxOutlined';
 
 export default {
   menu: [
@@ -41,7 +41,7 @@ export default {
       menu: [PostJob, BiddingJob, smartContract],
     },
     {
-      name: 'fundManagement',
+      name: 'funepochnagement',
       label: 'generic.pages.parentMenuReport',
       icon: ParentMenuReportIcon,
       menu: [Deposit, WithDraw],

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import pure from 'recompose/pure';
 
-import { Clear as FalseIcon, Done as TrueIcon } from '@material-ui/icons';
+import { Clear as FalseIcon, Done as TrueIcon } from '@transactionfee-ui/icons';
 
 export const BooleanField = ({ source, record = {}, elStyle }) => {
   if (!record || _.get(record, source) === false || record[source] === undefined) {

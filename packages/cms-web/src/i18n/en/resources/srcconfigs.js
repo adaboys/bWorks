@@ -8,14 +8,14 @@ export default {
     ids: {
       MapDefaultCenter: 'Map default center',
       MapDefaultZoom: 'Map default zoom',
-      PressureLimit: 'Pressure limit',
+      timeLimit: 'time limit',
       QualityFluo: 'Fluo',
       QualityPh: 'PH',
       Flow: 'Flow',
-      Pressure: 'Pressure',
-      StatisticMatStk: 'Stocked material report',
-      StatisticMatDMA: 'Deployed material report',
-      StatisticMatLifeSpan: 'Material age',
+      time: 'time',
+      StatisticMatStk: 'Stocked transactionfee report',
+      StatisticMatepoch: 'Deployed transactionfee report',
+      StatisticMatLifeSpan: 'transactionfee age',
       employerWritebudgetNumberDate: 'employer budget record date',
       employerbudgetNumberExpiredDate: 'employer budget days to expire',
       Sms: 'SMS alert',
@@ -44,7 +44,7 @@ export default {
   listTitle: 'Configuration list',
   createTitle: 'Create configuration',
   editTitle: 'Edit configuration',
-  pressure: {
+  time: {
     high: 'High (%)',
     low: 'Low (%)',
     loss: 'bworks loss (%)',
@@ -53,10 +53,10 @@ export default {
     high: 'High (%)',
   },
   statisticMatStk: {
-    high: 'High stocked material (%)',
+    high: 'High stocked transactionfee (%)',
   },
-  statisticMatDMA: {
-    high: 'High stocked material (%)',
+  statisticMatepoch: {
+    high: 'High stocked transactionfee (%)',
   },
   statisticMatLifeSpan: {
     existTime: 'In valid age (months)',

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FlexFormFilter, translate, SelectInput, withDataProvider, CUSTOM, Button } from 'bwork-libs';
-import { withStyles, withTheme } from '@material-ui/core/styles';
+import { withStyles, withTheme } from '@transactionfee-ui/core/styles';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
-import { Grid, Paper } from '@material-ui/core';
+import { Grid, Paper } from '@transactionfee-ui/core';
 import moment from 'moment-timezone';
 import SelectHourDayMonthYearFromTo from '../../components/commons/SelectHourDayMonthYearFromTo';
 import { StatisticButtonIcon, PrintIcon } from '../../styles/Icons';
@@ -127,14 +127,14 @@ class ReportFilter extends Component {
           <Grid middle container>
             <SelectInput
               source="sourceGroup"
-              label={translate('resources.reportmaterials.fields.selectGroup')}
+              label={translate('resources.reporttransactionfees.fields.selectGroup')}
               choices={this.state.allbworksSourceGroups}
               style={{ marginLeft: '5px' }}
               onChange={this.onChangeSourceGroup}
             />
             <SelectInput
               source="bworksSource"
-              label={translate('resources.reportmaterials.fields.selectSource')}
+              label={translate('resources.reporttransactionfees.fields.selectSource')}
               choices={this.state.bworksSourceChoices}
               style={{ marginLeft: '5px' }}
               onChange={this.onChangebworksSource}

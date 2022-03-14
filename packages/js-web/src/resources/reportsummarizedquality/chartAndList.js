@@ -12,8 +12,8 @@ import {
   showDialog,
   PdfView,
 } from 'bwork-libs';
-import { Grid, Paper } from '@material-ui/core';
-import { withStyles, withTheme } from '@material-ui/core/styles';
+import { Grid, Paper } from '@transactionfee-ui/core';
+import { withStyles, withTheme } from '@transactionfee-ui/core/styles';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 import moment from 'moment-timezone';

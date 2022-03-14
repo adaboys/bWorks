@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import { withStyles } from '@transactionfee-ui/core/styles';
+import AppBar from '@transactionfee-ui/core/AppBar';
+import Tabs from '@transactionfee-ui/core/Tabs';
+import Tab from '@transactionfee-ui/core/Tab';
 import { translate, CustomPage } from 'bwork-libs';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@transactionfee-ui/core';
 import { compose } from 'recompose';
 import { getFormValues, change } from 'redux-form';
 import { connect } from 'react-redux';

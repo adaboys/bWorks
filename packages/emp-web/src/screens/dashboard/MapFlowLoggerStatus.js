@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { MapMaterialNode, withDataProvider, URL_ONLY } from 'bwork-libs';
+import { MaptransactionfeeNode, withDataProvider, URL_ONLY } from 'bwork-libs';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { push as pushAction } from 'react-router-redux';
@@ -24,12 +24,12 @@ class MapFlowloadStatus extends Component {
     if (currentStatus && currentStatus.length > 0) {
       return (
         <Fragment>
-          {currentStatus.map(dma => {
-            if (dma.flowloads && dma.flowloads.length > 0) {
-              return dma.flowloads.map(flowload => {
+          {currentStatus.map(epoch => {
+            if (epoch.flowloads && epoch.flowloads.length > 0) {
+              return epoch.flowloads.map(flowload => {
                 let status = getStatus(flowload);
                 return (
-                  <MapMaterialNode
+                  <MaptransactionfeeNode
                     key={flowload.id}
                     data={flowload}
                     model="Flowload"

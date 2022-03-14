@@ -5,29 +5,29 @@ import { compose } from 'recompose';
 import { SelectInput, translate, withDataProvider, CUSTOM } from 'bwork-libs';
 import { connect } from 'react-redux';
 
-// hien thi cac Dma cua 1 level
-class DmaOneLevelSelectInput extends Component {
+// hien thi cac epoch cua 1 level
+class epochOneLevelSelectInput extends Component {
   state = {
     data: [],
   };
   componentDidMount() {
-    let { level, parentdmaid } = this.props;
-    this.getData(level, parentdmaid);
+    let { level, parentepochid } = this.props;
+    this.getData(level, parentepochid);
   }
-  getData = (level, parentDmaId) => {
+  getData = (level, parentepochId) => {
     let tmp = {};
-    if (parentDmaId) {
-      tmp.where = { and: [{ level }, { parentDmaId }] };
+    if (parentepochId) {
+      tmp.where = { and: [{ level }, { parentepochId }] };
     } else {
       tmp.where = { level };
     }
     this.props
-      .dataProvider(CUSTOM, 'dmas', {
+      .dataProvider(CUSTOM, 'epochs', {
         query: { filter: JSON.stringify(tmp) },
       })
       .then(res => {
         let tmp = [];
-        tmp.push({ id: 'AllDma', name: 'generic.allDma' });
+        tmp.push({ id: 'Allepoch', name: 'generic.allepoch' });
         if (res.data && res.data.length) {
           for (let i = 0; i < res.data.length; i++) {
             let item = {};
@@ -40,8 +40,8 @@ class DmaOneLevelSelectInput extends Component {
       });
   };
   UNSAFE_componentWillReceiveProps(nextProps) {
-    let { level, parentdmaid } = nextProps;
-    this.getData(level, parentdmaid);
+    let { level, parentepochid } = nextProps;
+    this.getData(level, parentepochid);
   }
   onChange = (e, val) => {
     this.props.onChange(val);
@@ -52,18 +52,18 @@ class DmaOneLevelSelectInput extends Component {
       <SelectInput
         {...rest}
         source={this.props.source}
-        label={this.props.translate('generic.dma')}
+        label={this.props.translate('generic.epoch')}
         choices={this.state.data}
         style={{ marginLeft: '5px' }}
-        defaultValue={'AllDma'}
+        defaultValue={'Allepoch'}
         onChange={this.onChange}
       />
     );
   }
 }
-DmaOneLevelSelectInput.defaultProps = {};
+epochOneLevelSelectInput.defaultProps = {};
 
-DmaOneLevelSelectInput.propTypes = {
+epochOneLevelSelectInput.propTypes = {
   translate: PropTypes.func,
   level: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
@@ -71,7 +71,7 @@ DmaOneLevelSelectInput.propTypes = {
   dataProvider: PropTypes.func,
   push: PropTypes.func,
   basePath: PropTypes.string,
-  parentdmaid: PropTypes.string,
+  parentepochid: PropTypes.string,
 };
 const enhance = compose(
   withDataProvider,
@@ -81,4 +81,4 @@ const enhance = compose(
   }),
 );
 
-export default enhance(DmaOneLevelSelectInput);
+export default enhance(epochOneLevelSelectInput);

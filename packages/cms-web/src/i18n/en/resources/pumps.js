@@ -26,7 +26,7 @@ export default {
     setupDate: 'Setup date',
     surfacebworksload: 'Surface bworks load',
     groundbworksload: 'Ground bworks load',
-    materialStatus: 'Material status',
+    transactionfeeStatus: 'transactionfee status',
     ...commonFields,
   },
   list: 'List',

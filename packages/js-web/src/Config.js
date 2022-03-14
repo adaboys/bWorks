@@ -23,7 +23,7 @@ export default {
       alert: '#fbc02d',
       criticalAlert: '#a31545',
     },
-    flowPressureChart: [
+    flowtimeChart: [
       '#3F51B5',
       '#4dbd74',
       '#FF9800',
@@ -159,36 +159,36 @@ export default {
     { id: '2', name: 'resources.alertthresholds.alertFlow' },
     { id: '3', name: 'resources.alertthresholds.alertVolume' },
   ],
-  materialStatus: [
-    { id: '1', name: 'resources.reportmaterials.statusGood' },
-    { id: '2', name: 'resources.reportmaterials.statusDamageField' },
-    { id: '3', name: 'resources.reportmaterials.statusDamageAndRevoked' },
-    { id: '4', name: 'resources.reportmaterials.statusDamageSentMaintain' },
+  transactionfeeStatus: [
+    { id: '1', name: 'resources.reporttransactionfees.statusGood' },
+    { id: '2', name: 'resources.reporttransactionfees.statusDamageField' },
+    { id: '3', name: 'resources.reporttransactionfees.statusDamageAndRevoked' },
+    { id: '4', name: 'resources.reporttransactionfees.statusDamageSentMaintain' },
   ],
   filterConditions: [
     {
       id: '1',
-      name: 'resources.reportmaterials.byMaterialStatus',
+      name: 'resources.reporttransactionfees.bytransactionfeeStatus',
       conditions: [
-        { id: '1', name: 'resources.reportmaterials.statusGood' },
-        { id: '2', name: 'resources.reportmaterials.statusDamageField' },
-        { id: '3', name: 'resources.reportmaterials.statusDamageAndRevoked' },
-        { id: '4', name: 'resources.reportmaterials.statusDamageSentMaintain' },
+        { id: '1', name: 'resources.reporttransactionfees.statusGood' },
+        { id: '2', name: 'resources.reporttransactionfees.statusDamageField' },
+        { id: '3', name: 'resources.reporttransactionfees.statusDamageAndRevoked' },
+        { id: '4', name: 'resources.reporttransactionfees.statusDamageSentMaintain' },
       ],
     },
     {
       id: '2',
-      name: 'resources.reportmaterials.byMaterialAge',
+      name: 'resources.reporttransactionfees.bytransactionfeeAge',
       conditions: [
-        { id: '1', name: 'resources.reportmaterials.expired' },
-        { id: '2', name: 'resources.reportmaterials.nearExpired' },
-        { id: '3', name: 'resources.reportmaterials.inValid' },
+        { id: '1', name: 'resources.reporttransactionfees.expired' },
+        { id: '2', name: 'resources.reporttransactionfees.nearExpired' },
+        { id: '3', name: 'resources.reporttransactionfees.inValid' },
       ],
     },
   ],
 
   selectAll: [{ id: 'all', name: 'generic.selectAll' }],
-  selectMaterial: [
+  selecttransactionfee: [
     { id: 'budget', name: 'generic.type.budget' },
     { id: 'auto-matcher', name: 'generic.type.auto-matcher' },
     { id: 'load', name: 'generic.type.load' },

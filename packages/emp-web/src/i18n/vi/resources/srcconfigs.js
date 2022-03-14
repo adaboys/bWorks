@@ -8,13 +8,13 @@ export default {
     ids: {
       MapDefaultCenter: 'Vị trí bản đồ',
       MapDefaultZoom: 'Zoom bản đồ',
-      PressureLimit: 'Cảnh báo áp lực',
+      timeLimit: 'Cảnh báo áp lực',
       QualityFluo: 'Cảnh báo Fluorescein',
       QualityPh: 'Cảnh báo PH',
       Flow: 'Lưu lượng',
-      Pressure: 'Áp lực',
+      time: 'Áp lực',
       StatisticMatStk: 'Thống kê vật tư trong kho',
-      StatisticMatDMA: 'Thống kê vật tư theo DMA',
+      StatisticMatepoch: 'Thống kê vật tư theo epoch',
       StatisticMatLifeSpan: 'Tuổi vật tư',
       employerWritebudgetNumberDate: 'Ngày ghi nước',
       employerbudgetNumberExpiredDate: 'Số ngày hết hạn sử dụng đồng hồ',
@@ -44,7 +44,7 @@ export default {
   listTitle: 'Danh sách cấu hình',
   createTitle: 'Tạo cấu hình',
   editTitle: 'Sửa cấu hình',
-  pressure: {
+  time: {
     high: 'Cảnh báo cao (%)',
     low: 'Cảnh báo yếu (%)',
     loss: 'Cảnh báo mất nước (%)',
@@ -55,7 +55,7 @@ export default {
   statisticMatStk: {
     high: 'Tình trạng tồn kho cao (%)',
   },
-  statisticMatDMA: {
+  statisticMatepoch: {
     high: 'Tình trạng tồn kho cao (%)',
   },
   statisticMatLifeSpan: {

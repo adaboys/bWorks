@@ -11,8 +11,8 @@ import {
   showDialog,
   PdfView,
 } from 'bwork-libs';
-import { Grid, Paper } from '@material-ui/core';
-import { withStyles, withTheme } from '@material-ui/core/styles';
+import { Grid, Paper } from '@transactionfee-ui/core';
+import { withStyles, withTheme } from '@transactionfee-ui/core/styles';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 import format from '../../util/format';
@@ -92,33 +92,33 @@ class ChartAndList extends Component {
     let { translate } = this.props;
     switch (record.conditionType) {
       case '1':
-        switch (record.materialStatus) {
+        switch (record.transactionfeeStatus) {
           case 1:
-            return translate('resources.reportmaterials.statusGood');
+            return translate('resources.reporttransactionfees.statusGood');
           // break;
           case 2:
-            return translate('resources.reportmaterials.statusDamageField');
+            return translate('resources.reporttransactionfees.statusDamageField');
           // break;
           case 3:
-            return translate('resources.reportmaterials.statusDamageAndRevoked');
+            return translate('resources.reporttransactionfees.statusDamageAndRevoked');
           // break;
           case 4:
-            return translate('resources.reportmaterials.statusDamageSentMaintain');
+            return translate('resources.reporttransactionfees.statusDamageSentMaintain');
           // break;
           default:
             break;
         }
         break;
       case '2':
-        switch (record.materialStatus) {
+        switch (record.transactionfeeStatus) {
           case 1:
-            return translate('resources.reportmaterials.expired');
+            return translate('resources.reporttransactionfees.expired');
           // break;
           case 2:
-            return translate('resources.reportmaterials.nearExpired');
+            return translate('resources.reporttransactionfees.nearExpired');
           // break;
           case 3:
-            return translate('resources.reportmaterials.inValid');
+            return translate('resources.reporttransactionfees.inValid');
           // break;
           default:
             break;
@@ -134,36 +134,36 @@ class ChartAndList extends Component {
     const { sumTotalbudget, sumTotalauto-matcher, sumTotalDataload, sumTotalload, data, sourceList, filter } = this.state;
     const { translate } = this.props;
     let templateData = {};
-    templateData.reportName = translate('generic.report.titleReportMaterial');
+    templateData.reportName = translate('generic.report.titleReporttransactionfee');
     templateData.reportFilter = `${sourceList} || ${filter.conditionType}-${filter.selectConditions}`;
-    templateData.sumData01 = translate('resources.reportmaterials.sumTotalbudget', {
+    templateData.sumData01 = translate('resources.reporttransactionfees.sumTotalbudget', {
       val: format.number(sumTotalbudget, 0),
     });
-    templateData.sumData02 = translate('resources.reportmaterials.sumTotalauto-matcher', {
+    templateData.sumData02 = translate('resources.reporttransactionfees.sumTotalauto-matcher', {
       val: format.number(sumTotalauto-matcher, 0),
     });
-    templateData.sumData03 = translate('resources.reportmaterials.sumTotalDataload', {
+    templateData.sumData03 = translate('resources.reporttransactionfees.sumTotalDataload', {
       val: format.number(sumTotalDataload, 0),
     });
-    templateData.sumData04 = translate('resources.reportmaterials.sumTotalload', {
+    templateData.sumData04 = translate('resources.reporttransactionfees.sumTotalload', {
       val: format.number(sumTotalload, 0),
     });
     templateData.tableHeader = {
-      column01: translate('resources.reportmaterials.fields.bworksSource'),
-      column02: translate('resources.reportmaterials.fields.materialStatus'),
-      column03: translate('resources.reportmaterials.fields.auto-matcher'),
-      column04: translate('resources.reportmaterials.fields.budget'),
-      column05: translate('resources.reportmaterials.fields.load'),
-      column06: translate('resources.reportmaterials.fields.dataload'),
-      column07: translate('resources.reportmaterials.fields.totalDevice'),
+      column01: translate('resources.reporttransactionfees.fields.bworksSource'),
+      column02: translate('resources.reporttransactionfees.fields.transactionfeeStatus'),
+      column03: translate('resources.reporttransactionfees.fields.auto-matcher'),
+      column04: translate('resources.reporttransactionfees.fields.budget'),
+      column05: translate('resources.reporttransactionfees.fields.load'),
+      column06: translate('resources.reporttransactionfees.fields.dataload'),
+      column07: translate('resources.reporttransactionfees.fields.totalDevice'),
     };
     //templateData.data = data;
-    templateData.data = data.map(item => Object.assign({}, item, { materialStatus: this.mapCodeToMessage(item) }));
+    templateData.data = data.map(item => Object.assign({}, item, { transactionfeeStatus: this.mapCodeToMessage(item) }));
     /* this.props.dataProvider(CUSTOM, 'ReportEngines', {
             method: 'POST',
             subUrl: 'generatePDF',
             body: { data: templateData,
-                templateId: "MaterialReportTemplate",
+                templateId: "transactionfeeReportTemplate",
                 templateModel: "SourceTemplate",
                 fileModel: "SourceFile",
             },
@@ -178,7 +178,7 @@ class ChartAndList extends Component {
         subUrl: 'generatePDF',
         body: {
           data: templateData,
-          templateId: 'MaterialReportTemplate',
+          templateId: 'transactionfeeReportTemplate',
           templateModel: 'SourceTemplate',
           fileModel: 'SourceFile',
         },
@@ -193,27 +193,27 @@ class ChartAndList extends Component {
     // let subTitle = [
     //   {
     //     id: 1,
-    //     content: translate('resources.reportmaterials.sumTotalbudget', { val: format.number(sumTotalbudget, 0) }),
+    //     content: translate('resources.reporttransactionfees.sumTotalbudget', { val: format.number(sumTotalbudget, 0) }),
     //   },
     //   {
     //     id: 2,
-    //     content: translate('resources.reportmaterials.sumTotalauto-matcher', { val: format.number(sumTotalauto-matcher, 0) }),
+    //     content: translate('resources.reporttransactionfees.sumTotalauto-matcher', { val: format.number(sumTotalauto-matcher, 0) }),
     //   },
     //   {
     //     id: 3,
-    //     content: translate('resources.reportmaterials.sumTotalDataload', {
+    //     content: translate('resources.reporttransactionfees.sumTotalDataload', {
     //       val: format.number(sumTotalDataload, 0),
     //     }),
     //   },
     //   {
     //     id: 4,
-    //     content: translate('resources.reportmaterials.sumTotalload', { val: format.number(sumTotalload, 0) }),
+    //     content: translate('resources.reporttransactionfees.sumTotalload', { val: format.number(sumTotalload, 0) }),
     //   },
     // ];
     let subTitle = [
       {
         id: 1,
-        content: translate(filter.selectMaterial ? `resources.reportmaterials.sumTotal${filter.selectMaterial}` : '', {
+        content: translate(filter.selecttransactionfee ? `resources.reporttransactionfees.sumTotal${filter.selecttransactionfee}` : '', {
           val: format.number(sum, 0),
         }),
       },
@@ -226,9 +226,9 @@ class ChartAndList extends Component {
             {...this.props}
             refController={refController}
             className="subheader"
-            resource="reportmaterials"
-            fixUrl="bworkssources/reportmaterial"
-            title={translate('generic.report.titleReportMaterial')}
+            resource="reporttransactionfees"
+            fixUrl="bworkssources/reporttransactionfee"
+            title={translate('generic.report.titleReporttransactionfee')}
             bulkActions={false}
             subTitle={subTitle}
             perPage={25}
@@ -237,37 +237,37 @@ class ChartAndList extends Component {
               <TextField source="bworksSource" sortable={false} />
               <ColoredFunctionField
                 sortable={false}
-                source="materialStatus"
+                source="transactionfeeStatus"
                 render={record => {
                   switch (record.conditionType) {
                     case '1':
-                      switch (record.materialStatus) {
+                      switch (record.transactionfeeStatus) {
                         case 1:
-                          return translate('resources.reportmaterials.statusGood');
+                          return translate('resources.reporttransactionfees.statusGood');
                         // break;
                         case 2:
-                          return translate('resources.reportmaterials.statusDamageField');
+                          return translate('resources.reporttransactionfees.statusDamageField');
                         // break;
                         case 3:
-                          return translate('resources.reportmaterials.statusDamageAndRevoked');
+                          return translate('resources.reporttransactionfees.statusDamageAndRevoked');
                         // break;
                         case 4:
-                          return translate('resources.reportmaterials.statusDamageSentMaintain');
+                          return translate('resources.reporttransactionfees.statusDamageSentMaintain');
                         // break;
                         default:
                           break;
                       }
                       break;
                     case '2':
-                      switch (record.materialStatus) {
+                      switch (record.transactionfeeStatus) {
                         case 1:
-                          return translate('resources.reportmaterials.expired');
+                          return translate('resources.reporttransactionfees.expired');
                         // break;
                         case 2:
-                          return translate('resources.reportmaterials.nearExpired');
+                          return translate('resources.reporttransactionfees.nearExpired');
                         // break;
                         case 3:
-                          return translate('resources.reportmaterials.inValid');
+                          return translate('resources.reporttransactionfees.inValid');
                         // break;
                         default:
                           break;
@@ -301,7 +301,7 @@ ChartAndList.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    report: state.admin.resources.reportmaterials,
+    report: state.admin.resources.reporttransactionfees,
   };
 };
 

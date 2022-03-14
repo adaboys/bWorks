@@ -10,7 +10,7 @@ import {
   MonthInput,
   CUSTOM,
 } from 'bwork-libs';
-import { Grid, withStyles } from '@material-ui/core';
+import { Grid, withStyles } from '@transactionfee-ui/core';
 import { connect } from 'react-redux';
 import moment from 'moment-timezone';
 const styles = () => ({

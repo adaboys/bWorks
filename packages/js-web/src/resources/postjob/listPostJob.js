@@ -18,7 +18,7 @@ import {
   ChipField,
   BooleanField,
 } from 'bwork-libs';
-import { Chip } from '@material-ui/core';
+import { Chip } from '@transactionfee-ui/core';
 import { compose } from 'recompose';
 import config from '../../Config';
 

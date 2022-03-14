@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { CustomPage, withDataProvider, translate, CUSTOM } from 'bwork-libs';
 import moment from 'moment-timezone';
-import { withStyles, withTheme } from '@material-ui/core/styles';
+import { withStyles, withTheme } from '@transactionfee-ui/core/styles';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
-import { Grid } from '@material-ui/core';
+import { Grid } from '@transactionfee-ui/core';
 import config from '../../Config';
 import loadChartHour from './loadChartHour.js';
 import loadChartDay from './loadChartDay.js';
@@ -87,7 +87,7 @@ class ChartSymbol extends Component {
               typeTimes={['hour', 'day']}
               defaultFilter={this.defaultFilter}
               showbworksParabudget={true}
-              flgMaterial={false}
+              flgtransactionfee={false}
               flgDetail={false}
               flgChart={true}
             />

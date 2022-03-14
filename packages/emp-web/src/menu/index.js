@@ -30,7 +30,7 @@ export default {
       menu: [PostJob, BiddingJob, smartContract],
     },
     {
-      name: 'fundManagement',
+      name: 'funepochnagement',
       label: 'generic.pages.parentMenuReport',
       icon: ParentMenuReportIcon,
       menu: [Deposit, WithDraw],

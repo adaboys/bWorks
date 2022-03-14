@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, withTheme } from '@material-ui/core';
+import { Grid, withTheme } from '@transactionfee-ui/core';
 import { withDataProvider } from 'bwork-libs';
 import { compose } from 'recompose';
 import TotalSourceCapacity from './totalSourceCapacity';

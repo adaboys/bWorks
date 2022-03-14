@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
-import { withTheme } from '@material-ui/core';
+import { withTheme } from '@transactionfee-ui/core';
 import { Marker, InfoWindow } from 'react-google-maps';
 
 //

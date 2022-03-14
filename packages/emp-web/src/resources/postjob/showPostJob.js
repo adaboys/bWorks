@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'recompose';
-import { Grid, Chip } from '@material-ui/core';
+import { Grid, Chip } from '@transactionfee-ui/core';
 import { Show, HtmlField, TextField, translate, FlexForm, SelectField, DateField, NumberField, ArrayField, SingleFieldList, ChipField} from 'bwork-libs';
 import config from '../../Config';
 

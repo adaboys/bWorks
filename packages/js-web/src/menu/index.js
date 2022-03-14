@@ -24,13 +24,13 @@ export default {
   menu: [
     dashboard,
     {
-      name: 'bidManagement',
-      label: 'generic.pages.bidManagement',
+      name: 'biepochnagement',
+      label: 'generic.pages.biepochnagement',
       icon: ParentMenuStatisticIcon,
       menu: [PostJob, BiddingJob, smartContract],
     },
     {
-      name: 'fundManagement',
+      name: 'funepochnagement',
       label: 'generic.pages.parentMenuReport',
       icon: ParentMenuReportIcon,
       menu: [Deposit, WithDraw],

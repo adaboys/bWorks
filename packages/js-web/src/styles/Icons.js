@@ -25,20 +25,20 @@ export const iconToMap = ({iconElement, color='#3f51b5', viewBox = '0 0 24 24', 
 
 export {
   Dashboard as DashboardIcon,
-  Map as DmaIcon,
+  Map as epochIcon,
   AccountBox as AppUserIcon,
   Group as PermissionIcon,
   SettingsOverscan as DesignSetupIcon,
   Polymer as ParentMenuMatIcon,
   InsertChart as ManageMatIcon,
   ViewList as StatisticMatInStkIcon,
-  ViewList as StatisticMatByDmaIcon,
+  ViewList as StatisticMatByepochIcon,
   ViewList as StatisticMatByLifeSpanIcon,
   Eject as ExportStockIcon,
   Print as PrintIcon,
   Stop as StopIcon,
   PlayArrow as ResumeIcon,
-  Add as AddMatTypeIcon,
+  Add as AdepochtTypeIcon,
   ViewList as MatDetailTypeIcon,
   Memory as OtherIcon,
   Transform as StatisticButtonIcon,
@@ -52,12 +52,12 @@ export {
   FormatColorReset as bworksLossIcon,
   Opacity as QuantityIcon,
   LocationCity as FactoryIcon,
-  NetworkCheck as PressureIcon,
+  NetworkCheck as timeIcon,
   BubbleChart as FlowRateIcon,
   Timeline as StatusIcon,
-  LowPriority as bworksFlowPressureIcon,
+  LowPriority as bworksFlowtimeIcon,
   AccessTime as LogTimeIcon,
-  BubbleChart as MaterialOnMapIcon,
+  BubbleChart as transactionfeeOnMapIcon,
   Map as GeoIcon,
   LocationCity as GeoChildIcon,
   InsertChartOutlined as StatisticIcon,
@@ -131,7 +131,7 @@ export {
   BarChart as ReportVolumeIcon,
   Opacity as ReportSummarizedQualityIcon,
   ViewHeadline as SourceFlowRateIcon,
-  FormatListBulleted as ReportMaterialIcon,
+  FormatListBulleted as ReporttransactionfeeIcon,
   ChromeReaderMode as SourceTemplateIcon,
   Category as GisDesignIcon,
   Timeline as LineChartIcon,
@@ -141,14 +141,14 @@ export {
   PowerInput as DesignPipeIcon,
   RoundedCorner as MapPipeIcon,
   Search as MonitorIcon,
-} from '@material-ui/icons';
+} from '@transactionfee-ui/icons';
 
 export { default as FilterIcon } from './svgs/FilterIcon';
 export { default as FlowloadIcon } from './svgs/FlowloadIcon';
 export { default as budgetIcon } from './svgs/budgetIcon';
 export { default as NodeIcon } from './svgs/NodeIcon';
 export { default as PipeIcon } from './svgs/PipeIcon';
-export { default as PressureReducingIcon } from './svgs/PressureReducingIcon';
+export { default as timeReducingIcon } from './svgs/timeReducingIcon';
 export { default as loadIcon } from './svgs/loadIcon';
 export { default as QualityloadIcon } from './svgs/QualityloadIcon';
 export { default as TankIcon } from './svgs/TankIcon';

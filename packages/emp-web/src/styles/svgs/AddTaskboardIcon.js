@@ -1,5 +1,5 @@
 import React from 'react';
-import { Add } from '@material-ui/icons';
+import { Add } from '@transactionfee-ui/icons';
 
 const AddTaskboardIcon = props => <Add {...props} />;
 
