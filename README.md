@@ -1,9 +1,9 @@
 # Bworks
 
-#RUN employer app
+#RUN employer app:
 yarn run-emp
 
-#RUN job-seeker app
+#RUN job-seeker app:
 yarn run-jsk
 
 #Run cms-app
@@ -37,7 +37,7 @@ DOMAIN=apis.bworks.app
 docker-compose up -d
 ```
 =======
-# bworks
+#package module source: ./packages
 
 
 
