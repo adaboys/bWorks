@@ -1,0 +1,15 @@
+export default [
+  'appusers',
+  'interfacestandards',
+  'bworksparabudgets',
+  'bworksstandards',
+  'measuremethods',
+  'dataloggers',
+  'budgets',
+  'sensors',
+  'sensorprobes',
+  'bworkssources',
+  'pumps',
+  'bworkssourcegroups',
+  'srcconfigs',
+];

@@ -1,0 +1,8 @@
+node_modules
+lib
+/libs/bwork-lib-component-explorer
+/libs/bwork-lib-storage-aws
+/libs/bwork-lib-connector-mongodb
+/libs/bwork-lib-datasource-juggler
+packages/bworks-api/employer
+/docker-config

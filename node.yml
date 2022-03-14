@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  api:
+    build: '.'
+    container_name: sfapibe
+    working_dir: /home/node/app
+    volumes:
+       - .:/home/node/app
+    ports:
+      - 4001:4001
+    command: "yarn run-api"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
