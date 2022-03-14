@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Bworks
 
 #RUN employer app
@@ -25,7 +24,7 @@ DK_DATA=.data
 MONGO_USERNAME=admin
 MONGO_PASSWORD=***
 
-DOMAIN=hcm.Bworks.online
+DOMAIN=apis.bworks.app
 
 ```
 
@@ -39,4 +38,6 @@ docker-compose up -d
 ```
 =======
 # bworks
->>>>>>> 816bff554262b74fdec28f561db3ba193053d639
+
+
+
