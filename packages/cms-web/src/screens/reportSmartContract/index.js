@@ -15,7 +15,7 @@ export default {
     edit: EditreportSmartContract,
     show: ShowreportSmartContract,
   },
-  resources: ['postjobs'],
+  resources: ['reportSmartContract'],
   active: true,
   access: {
     read: [],
