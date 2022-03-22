@@ -1,0 +1,1 @@
+#this folder to contains script to validate, build & deploy smart contract to Cardano
